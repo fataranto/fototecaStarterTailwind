@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+  @apply w-32 px-6 py-1 bg-yellow-900 hover:bg-primary text-primary hover:text-yellow-900 font-bold rounded-2xl;
+}}
+
+
+/* pseudo selectores y otros especiales */
+:root {
+  --primary: #f2b366;
+  --secondary: #3f2f21;
+  --bg-primary: rgba(190, 183, 171, 0.3);
+}
+
