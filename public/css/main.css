@@ -1556,9 +1556,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-style: none;
 }
 
-.bg-red-100 {
+.bg-orange-300 {
   --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
 }
 
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
@@ -1766,14 +1766,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: "some font",sans-serif;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -2204,7 +2204,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* pseudo selectores y otros especiales */
 
 :root {
-  --primary: #f2b366;
+  --primary: #ffffff;
   --secondary: #3f2f21;
   --bg-primary: rgba(190, 183, 171, 0.3);
 }

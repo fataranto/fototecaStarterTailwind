@@ -10,7 +10,7 @@
 
 /* pseudo selectores y otros especiales */
 :root {
-  --primary: #f2b366;
+  --primary: #ffffff;
   --secondary: #3f2f21;
   --bg-primary: rgba(190, 183, 171, 0.3);
 }
