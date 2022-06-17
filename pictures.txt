@@ -1,0 +1,37 @@
+const pictures = [ //luego lo sustituiré por un json para conservar el contenido
+    {
+        title: "Cactus",
+        URL: "https://randomwordgenerator.com/img/picture-generator/50e6d1414c50b10ff3d8992cc12c30771037dbf85254784e77267ed09444_640.jpg",
+        date: "10/01/22"
+    },
+    {
+        title: "Windows",
+        URL: "https://randomwordgenerator.com/img/picture-generator/53e3d54a4c57a814f1dc8460962e33791c3ad6e04e507440762e7ad39344c4_640.jpg",
+        date: "18/11/20"
+    },
+    {
+        title: "Buildings",
+        URL: "https://randomwordgenerator.com/img/picture-generator/53e1d7444d53af14f1dc8460962e33791c3ad6e04e507440742a7ad19f4cc0_640.jpg",
+        date: "25/09/18"
+    },
+    {
+        title: "Hidden kitty",
+        URL: "https://randomwordgenerator.com/img/picture-generator/57e3d3444a52ac14f1dc8460962e33791c3ad6e04e50744172297cdd9f45c7_640.jpg",
+        date: "12/03/21"
+    },
+    {
+        title: "On the road",
+        URL: "https://randomwordgenerator.com/img/picture-generator/57e6d3404f56af14f1dc8460962e33791c3ad6e04e507440762a7cd49e45c4_640.jpg",
+        date: "25/08/22"
+    },
+    {
+        title: 'Blue',
+        URL: 'https://images.pexels.com/photos/3204596/pexels-photo-3204596.jpeg',
+        date: '2022-06-16'
+    },
+    {
+        title: 'Sleeping kitties',
+        URL: 'https://images.pexels.com/photos/96428/pexels-photo-96428.jpeg',
+        date: '2022-06-16'
+    }
+];

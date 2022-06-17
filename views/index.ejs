@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body class="bg-orange-300">
-    <h1 class="text-3xl text-orange-600 font-bold">Título index</h1>
+    <h1 class="text-center text-3xl text-orange-600 font-bold">Título index</h1>
+
+    <section class="flex justify-center w-screen flex-wrap px-24">
+        <% pics.forEach(function(p) { %>
+        <div class="m-2">
+            <img class="h-36" src="<%= p.URL %>" alt="">
+            <p>
+                <%= p.title %>
+
+            </p>
+            <p>
+                <%= p.date %>
+            </p>
+
+        </div>
+
+        <% }); %>
+    </section>
 
 </body>
+
 </html>
