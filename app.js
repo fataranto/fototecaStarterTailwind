@@ -82,8 +82,6 @@ app.get("/", (req, res) => {
     });
 })
 
-
-
 app.get("/upload", (req, res) => {
     res.render("form");
 })
@@ -100,10 +98,12 @@ app.post('/imguploaded', function (req, res) {
 
     //console.log(pictures);
 
-    res.render("index", {
+    res.redirect("/");
+
+    /* res.render("index", {
         numPics: pictures.length,
         pics: pictures
-    });
+    }); */
 
 })
 
