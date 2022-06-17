@@ -72,7 +72,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
 app.use(express.urlencoded({
-    extended: true
+    extended: false
 })); //para obtner datos del formulario via POST
 
 app.get("/", (req, res) => {

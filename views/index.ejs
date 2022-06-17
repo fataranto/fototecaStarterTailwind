@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <%- include('./partials/head'); %>
 </head>
 
 <body class="bg-orange-300">
     <h1 class="text-center text-3xl text-orange-600 font-bold">Título index</h1>
+    
+<%- include('./partials/nav'); %>
 
     <section class="flex justify-center w-screen flex-wrap px-24">
         <% pics.forEach(function(p) { %>
