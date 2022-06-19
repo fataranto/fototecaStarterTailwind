@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
-const pictures = [ //luego lo sustituiré por un json para conservar el contenido
+/* const pictures = [ //luego lo sustituiré por un json para conservar el contenido
     {
         title: "Cactus",
         URL: "https://randomwordgenerator.com/img/picture-generator/50e6d1414c50b10ff3d8992cc12c30771037dbf85254784e77267ed09444_640.jpg",
@@ -62,7 +63,13 @@ const pictures = [ //luego lo sustituiré por un json para conservar el contenid
         URL: "https://randomwordgenerator.com/img/picture-generator/57e3d3444a52ac14f1dc8460962e33791c3ad6e04e50744172297cdd9f45c7_640.jpg",
         date: "12/03/21"
     }
-];
+]; */
+
+
+let pictures = JSON.parse(fs.readFileSync('./photos.json'));
+//let student = JSON.parse(rawdata);
+
+//let pictures = require('./photos.json');
 
 const app = express();
 
@@ -95,6 +102,9 @@ app.post('/imguploaded', function (req, res) {
     }
 
     pictures.push(myNewPic);
+
+    let data = JSON.stringify(pictures, null, 2);
+    fs.writeFileSync('photos.json', data);
 
     //console.log(pictures);
 
