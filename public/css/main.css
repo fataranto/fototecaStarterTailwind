@@ -2266,8 +2266,8 @@ select {
   vertical-align: super;
 }
 
-.font-\[\'Open_Sans\'\] {
-  font-family: 'Open Sans';
+.font-sans {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .font-\[\'some_font\'\2c sans-serif\] {
@@ -2276,10 +2276,6 @@ select {
 
 .font-\[\"some_font\"\2c sans-serif\] {
   font-family: "some font",sans-serif;
-}
-
-.font-sans {
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 .text-2xl {
@@ -2295,6 +2291,11 @@ select {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-4xl {
@@ -2381,6 +2382,10 @@ select {
 .stacked-fractions {
   --tw-numeric-fraction: stacked-fractions;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .tracking-wider {
