@@ -2,76 +2,61 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
-/* const pictures = [ //luego lo sustituiré por un json para conservar el contenido
-    {
-        title: "Cactus",
-        URL: "https://randomwordgenerator.com/img/picture-generator/50e6d1414c50b10ff3d8992cc12c30771037dbf85254784e77267ed09444_640.jpg",
-        date: "10/01/22"
-    },
-    {
-        title: "Windows",
-        URL: "https://randomwordgenerator.com/img/picture-generator/53e3d54a4c57a814f1dc8460962e33791c3ad6e04e507440762e7ad39344c4_640.jpg",
-        date: "18/11/20"
-    },
-    {
-        title: "Buildings",
-        URL: "https://randomwordgenerator.com/img/picture-generator/53e1d7444d53af14f1dc8460962e33791c3ad6e04e507440742a7ad19f4cc0_640.jpg",
-        date: "25/09/18"
-    },
-    {
-        title: "Hidden kitty",
-        URL: "https://randomwordgenerator.com/img/picture-generator/57e3d3444a52ac14f1dc8460962e33791c3ad6e04e50744172297cdd9f45c7_640.jpg",
-        date: "12/03/21"
-    },
-    {
-        title: "Cactus",
-        URL: "https://randomwordgenerator.com/img/picture-generator/50e6d1414c50b10ff3d8992cc12c30771037dbf85254784e77267ed09444_640.jpg",
-        date: "10/01/22"
-    },
-    {
-        title: "Windows",
-        URL: "https://randomwordgenerator.com/img/picture-generator/53e3d54a4c57a814f1dc8460962e33791c3ad6e04e507440762e7ad39344c4_640.jpg",
-        date: "18/11/20"
-    },
-    {
-        title: "Buildings",
-        URL: "https://randomwordgenerator.com/img/picture-generator/53e1d7444d53af14f1dc8460962e33791c3ad6e04e507440742a7ad19f4cc0_640.jpg",
-        date: "25/09/18"
-    },
-    {
-        title: "Hidden kitty",
-        URL: "https://randomwordgenerator.com/img/picture-generator/57e3d3444a52ac14f1dc8460962e33791c3ad6e04e50744172297cdd9f45c7_640.jpg",
-        date: "12/03/21"
-    },
-    {
-        title: "Cactus",
-        URL: "https://randomwordgenerator.com/img/picture-generator/50e6d1414c50b10ff3d8992cc12c30771037dbf85254784e77267ed09444_640.jpg",
-        date: "10/01/22"
-    },
-    {
-        title: "Windows",
-        URL: "https://randomwordgenerator.com/img/picture-generator/53e3d54a4c57a814f1dc8460962e33791c3ad6e04e507440762e7ad39344c4_640.jpg",
-        date: "18/11/20"
-    },
-    {
-        title: "Buildings",
-        URL: "https://randomwordgenerator.com/img/picture-generator/53e1d7444d53af14f1dc8460962e33791c3ad6e04e507440742a7ad19f4cc0_640.jpg",
-        date: "25/09/18"
-    },
-    {
-        title: "Hidden kitty",
-        URL: "https://randomwordgenerator.com/img/picture-generator/57e3d3444a52ac14f1dc8460962e33791c3ad6e04e50744172297cdd9f45c7_640.jpg",
-        date: "12/03/21"
-    }
-]; */
-
-
-let pictures = JSON.parse(fs.readFileSync('./photos.json'));
-//let student = JSON.parse(rawdata);
-
-//let pictures = require('./photos.json');
-
 const app = express();
+
+/* const {
+    getColorFromURL
+} = require('color-thief-node'); */
+/* const {
+    getPaletteFromURL
+} = require('color-thief-node');
+ */
+
+const pictures = JSON.parse(fs.readFileSync('./photos.json'));
+
+//sort pictures by date
+
+sortPics = function () {
+    pictures.sort((a, b) => {
+        if (a.date < b.date) {
+            return 1;
+        }
+        if (a.date > b.date) {
+            return -1;
+        }
+        return 0;
+    });
+}
+
+
+
+/* (async () => {
+    const dominantColor = await getColorFromURL(pictures[0].URL);
+})(); */
+
+//console.log(pictures[0].URL);
+
+//const addPallete = pictures => {
+
+  //  for (let picture of pictures) {
+        // (async () => {
+        //     const colorPallete = await getColorFromURL(picture.URL);
+        // })();
+        //picture.pallete = colorPallete;
+    //    console.log(picture.URL);
+      //  (async () => {
+        //const dominantColor = await getColorFromURL(picture.URL);
+        //})
+        //console.log(dominantColor);
+    //}
+
+    //return console.log(pictures);
+
+//};
+
+//addPallete(pictures);
+
+
 
 //app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -80,9 +65,10 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({
     extended: false
-})); //para obtner datos del formulario via POST
+})); //get data from form vis POST
 
 app.get("/", (req, res) => {
+    sortPics();
     res.render("index", {
         numPics: pictures.length,
         pics: pictures
