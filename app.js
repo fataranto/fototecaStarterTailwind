@@ -4,15 +4,10 @@ const fs = require('fs');
 
 const app = express();
 
-/* const {
-    getColorFromURL
-} = require('color-thief-node'); */
-/* const {
-    getPaletteFromURL
-} = require('color-thief-node');
- */
+const { getPaletteFromURL } = require('color-thief-node');
 
-const pictures = JSON.parse(fs.readFileSync('./photos.json'));
+
+const pictures = JSON.parse(fs.readFileSync('./photospallete.json'));
 
 //sort pictures by date
 
@@ -29,33 +24,13 @@ sortPics = function () {
 }
 
 
+const myColorPallete = (async (imageURL) => {
+    const colorPallete = await getPaletteFromURL(imageURL);
+    console.log(colorPallete);
 
-/* (async () => {
-    const dominantColor = await getColorFromURL(pictures[0].URL);
-})(); */
+    return colorPallete;
 
-//console.log(pictures[0].URL);
-
-//const addPallete = pictures => {
-
-  //  for (let picture of pictures) {
-        // (async () => {
-        //     const colorPallete = await getColorFromURL(picture.URL);
-        // })();
-        //picture.pallete = colorPallete;
-    //    console.log(picture.URL);
-      //  (async () => {
-        //const dominantColor = await getColorFromURL(picture.URL);
-        //})
-        //console.log(dominantColor);
-    //}
-
-    //return console.log(pictures);
-
-//};
-
-//addPallete(pictures);
-
+});
 
 
 //app.set('views', path.join(__dirname, 'views'));
@@ -71,35 +46,53 @@ app.get("/", (req, res) => {
     sortPics();
     res.render("index", {
         numPics: pictures.length,
-        pics: pictures
+        pics: pictures,
+        page_name: 'home'
     });
 })
 
 app.get("/upload", (req, res) => {
-    res.render("form");
+    res.render("form", {
+        page_name: 'upload'
+    });
 })
 
-app.post('/imguploaded', function (req, res) {
+app.get("/error", (req, res) => {
+    res.render("404");
+})
+
+app.post('/imguploaded', async function (req, res) {
+
+    let cPallete;
+    await exists(req.body.url)
+
+    async function exists (path) {  
+        try {
+          fs.access(path)
+           cPallete = await myColorPallete(req.body.url);
 
     let myNewPic = {
         title: req.body.title,
         URL: req.body.url,
-        date: req.body.date
+        date: req.body.date,
+        pallete: cPallete
     }
 
     pictures.push(myNewPic);
 
     let data = JSON.stringify(pictures, null, 2);
-    fs.writeFileSync('photos.json', data);
+    fs.writeFileSync('photospallete.json', data);
 
-    //console.log(pictures);
 
     res.redirect("/");
 
-    /* res.render("index", {
-        numPics: pictures.length,
-        pics: pictures
-    }); */
+        } catch {
+            res.redirect("/error");
+        }
+      }
+     
+    
+
 
 })
 
