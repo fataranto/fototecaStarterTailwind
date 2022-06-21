@@ -1,37 +1,5 @@
 [
   {
-    "title": "Fruits",
-    "URL": "https://cdn.pixabay.com/photo/2016/06/20/13/16/greengrocers-1468809_960_720.jpg",
-    "date": "2022-06-20",
-    "pallete": [
-      [
-        176,
-        59,
-        26
-      ],
-      [
-        62,
-        50,
-        38
-      ],
-      [
-        223,
-        208,
-        88
-      ],
-      [
-        199,
-        159,
-        39
-      ],
-      [
-        167,
-        141,
-        157
-      ]
-    ]
-  },
-  {
     "title": "Green Snake",
     "URL": "https://cdn.pixabay.com/photo/2016/08/31/18/19/snake-1634293_960_720.jpg",
     "date": "2022-06-04",
@@ -64,9 +32,73 @@
     ]
   },
   {
+    "title": "Blue Eyes",
+    "URL": "https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg",
+    "date": "2022-04-02",
+    "pallete": [
+      [
+        144,
+        145,
+        145
+      ],
+      [
+        44,
+        47,
+        48
+      ],
+      [
+        224,
+        224,
+        224
+      ],
+      [
+        91,
+        57,
+        55
+      ],
+      [
+        93,
+        76,
+        68
+      ]
+    ]
+  },
+  {
+    "title": "Windows",
+    "URL": "https://randomwordgenerator.com/img/picture-generator/53e3d54a4c57a814f1dc8460962e33791c3ad6e04e507440762e7ad39344c4_640.jpg",
+    "date": "2022-02-05",
+    "pallete": [
+      [
+        58,
+        59,
+        56
+      ],
+      [
+        216,
+        216,
+        214
+      ],
+      [
+        175,
+        176,
+        172
+      ],
+      [
+        148,
+        148,
+        145
+      ],
+      [
+        165,
+        164,
+        172
+      ]
+    ]
+  },
+  {
     "title": "Blue Sea Anemone",
     "URL": "https://images.pexels.com/photos/3204596/pexels-photo-3204596.jpeg",
-    "date": "2022-06-02",
+    "date": "2022-01-02",
     "pallete": [
       [
         8,
@@ -96,34 +128,130 @@
     ]
   },
   {
-    "title": "Blue Eyes",
-    "URL": "https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg",
-    "date": "2022-06-02",
+    "title": "Fruits",
+    "URL": "https://cdn.pixabay.com/photo/2016/06/20/13/16/greengrocers-1468809_960_720.jpg",
+    "date": "2021-06-20",
     "pallete": [
       [
-        144,
-        145,
-        145
+        176,
+        59,
+        26
       ],
       [
-        44,
-        47,
-        48
+        62,
+        50,
+        38
       ],
       [
-        224,
-        224,
-        224
+        223,
+        208,
+        88
       ],
       [
-        91,
-        57,
-        55
+        199,
+        159,
+        39
       ],
       [
-        93,
-        76,
-        68
+        167,
+        141,
+        157
+      ]
+    ]
+  },
+  {
+    "title": "Hidden kitty",
+    "URL": "https://randomwordgenerator.com/img/picture-generator/57e3d3444a52ac14f1dc8460962e33791c3ad6e04e50744172297cdd9f45c7_640.jpg",
+    "date": "2019-08-12",
+    "pallete": [
+      [
+        73,
+        120,
+        23
+      ],
+      [
+        140,
+        207,
+        58
+      ],
+      [
+        187,
+        232,
+        72
+      ],
+      [
+        22,
+        29,
+        16
+      ],
+      [
+        125,
+        127,
+        123
+      ]
+    ]
+  },
+  {
+    "title": "Little Panther",
+    "URL": "https://cdn.pixabay.com/photo/2018/10/11/12/31/cat-3739702_960_720.jpg",
+    "date": "2018-06-08",
+    "pallete": [
+      [
+        113,
+        120,
+        103
+      ],
+      [
+        212,
+        203,
+        196
+      ],
+      [
+        29,
+        26,
+        25
+      ],
+      [
+        184,
+        188,
+        175
+      ],
+      [
+        187,
+        179,
+        180
+      ]
+    ]
+  },
+  {
+    "title": "Cactus",
+    "URL": "https://randomwordgenerator.com/img/picture-generator/50e6d1414c50b10ff3d8992cc12c30771037dbf85254784e77267ed09444_640.jpg",
+    "date": "2022-03-19",
+    "pallete": [
+      [
+        18,
+        15,
+        13
+      ],
+      [
+        181,
+        175,
+        163
+      ],
+      [
+        119,
+        136,
+        126
+      ],
+      [
+        148,
+        63,
+        20
+      ],
+      [
+        115,
+        124,
+        133
       ]
     ]
   }

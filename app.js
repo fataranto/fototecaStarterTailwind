@@ -9,6 +9,8 @@ const { getPaletteFromURL } = require('color-thief-node');
 
 const pictures = JSON.parse(fs.readFileSync('./photospallete.json'));
 
+const isImageURL = require('image-url-validator').default;
+
 //sort pictures by date
 
 sortPics = function () {
@@ -63,13 +65,49 @@ app.get("/error", (req, res) => {
 
 app.post('/imguploaded', async function (req, res) {
 
-    let cPallete;
-    await exists(req.body.url)
 
-    async function exists (path) {  
-        try {
-          fs.access(path)
-           cPallete = await myColorPallete(req.body.url);
+
+
+let imgURL = req.body.url
+
+let isImage = await isImageURL (imgURL).then(is_image => {
+    return is_image
+});
+
+if (isImage) {
+    let cPallete = await myColorPallete(imgURL);
+
+    let myNewPic = {
+        title: req.body.title,
+        URL: imgURL,
+        date: req.body.date,
+        pallete: cPallete
+    }
+
+    pictures.push(myNewPic);
+                
+                    let data = JSON.stringify(pictures, null, 2);
+                    fs.writeFileSync('photospallete.json', data); 
+
+                    res.redirect("/");
+}else{
+    res.redirect("/error");
+}
+
+
+
+
+
+
+
+
+//isMyURL();
+
+
+
+/*
+if (isMyURL) {
+    cPallete = await myColorPallete(req.body.url);
 
     let myNewPic = {
         title: req.body.title,
@@ -79,22 +117,25 @@ app.post('/imguploaded', async function (req, res) {
     }
 
     pictures.push(myNewPic);
+                
+                    let data = JSON.stringify(pictures, null, 2);
+                    fs.writeFileSync('photospallete.json', data); 
 
-    let data = JSON.stringify(pictures, null, 2);
-    fs.writeFileSync('photospallete.json', data);
-
-
-    res.redirect("/");
-
-        } catch {
-            res.redirect("/error");
-        }
-      }
-     
-    
+                    res.redirect("/");
 
 
-})
+
+} else {
+
+    res.redirect("/error");
+
+}
+*/
+});
+
+                    
+                    
+
 
 
 app.use((req, res) => {
