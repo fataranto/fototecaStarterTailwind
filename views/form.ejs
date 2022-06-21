@@ -25,7 +25,7 @@
                               border-gray-300
                               shadow-sm
                               focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
-                            " placeholder="" value="title" name="title" id="title">
+                            " placeholder="Title" value="" name="title" id="title" pattern="[a-zA-Z0-9_]+" minlength=2 maxlength="10" title="The title should be between 2 and 10 characters and it may only contain letters, numbers or an underscore" required>
                         </label>
                         <label class="block" for="url">
                           <span class="text-slate-400">URL</span>
@@ -37,7 +37,7 @@
                               border-gray-300
                               shadow-sm
                               focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
-                            " placeholder="" value="url" name="url" id="url">
+                            " placeholder="url" value="" name="url" id="url" pattern="^https?:\/\/[\w\\%\.\/-]+(\.jpeg|\.jpg|\.png|\.webp)$" minlegth=6 title="URL should start with 'http' and contain a valid image format; only .png, .jpeg, .jpg and .webp are valid" required>
                         </label>
                         <label class="block" for="date">
                           <span class="text-slate-400">Date</span>
@@ -49,10 +49,10 @@
                               border-gray-300
                               shadow-sm
                               focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
-                            " value="date" name="date" id="date">
+                            " value="" name="date" id="date" required>
                         </label>
                         <div class="block">
-                            <button class="px-4 py-2 font-semibold text-sm bg-sky-900 hover:bg-sky-700 text-slate-400 hover:text-slate-200 rounded-none shadow-sm rounded-lg">Submit</button>
+                            <button class="px-4 py-2 font-semibold text-sm bg-sky-900 hover:bg-sky-700 text-slate-400 hover:text-slate-200 rounded-lg shadow-sm">Submit</button>
                           </div>
                         </div>
                   </form>
