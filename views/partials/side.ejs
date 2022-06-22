@@ -45,7 +45,7 @@
               <a
               
                 href="/"
-                class="flex justify-center px-2 py-1.5 text-gray-500 rounded hover:bg-gray-50 hover:text-gray-700 relative group <% if (page_name === 'home') { %> bg-slate-300 <% } %>"
+                class="flex justify-center px-1 py-1.5 text-gray-500 rounded hover:bg-gray-50 hover:text-gray-700 relative group <% if (page_name === 'home') { %> bg-slate-300 <% } %>"
                 
               >
                 <svg
@@ -59,14 +59,14 @@
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                   />
                 </svg>
   
                 <span
                   class="absolute text-xs font-medium text-white bg-gray-900 left-full ml-4 px-2 py-1.5 top-1/2 -translate-y-1/2 rounded opacity-0 group-hover:opacity-100"
                 >
-                  Home
+                  Gallery
                 </span>
               </a>
             </li>
@@ -74,7 +74,7 @@
             <li>
               <a
                 href="/upload"
-                class="flex relative group justify-center px-2 py-1.5 text-gray-500 rounded hover:bg-gray-50 hover:text-gray-700 <% if (page_name === 'upload') { %> bg-slate-300 <% } %>"
+                class="flex relative group justify-center px-1 py-1.5 text-gray-500 rounded hover:bg-gray-50 hover:text-gray-700 <% if (page_name === 'upload') { %> bg-slate-300 <% } %>"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -84,10 +84,12 @@
                   stroke="currentColor"
                   stroke-width="2"
                 >
+                  <path stroke="none" d="M0 0h24v24H0z"/>  
+                  <circle cx="12" cy="13" r="3" />
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                    d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h2m9 7v7a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />  <line x1="15" y1="6" x2="21" y2="6" />  <line x1="18" y1="3" x2="18" y2="9"
                   />
                 </svg>
   
@@ -98,39 +100,10 @@
                 </span>
               </a>
             </li>
-  
             <li>
               <a
                 href=""
-                class="flex justify-center px-2 py-1.5 text-gray-500 rounded hover:bg-gray-50 hover:text-gray-700 relative group"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5 opacity-75"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  />
-                </svg>
-  
-                <span
-                  class="absolute text-xs font-medium text-white bg-gray-900 left-full ml-4 px-2 py-1.5 top-1/2 -translate-y-1/2 rounded opacity-0 group-hover:opacity-100"
-                >
-                  Invoices
-                </span>
-              </a>
-            </li>
-  
-            <li>
-              <a
-                href=""
-                class="relative group flex justify-center px-2 py-1.5 text-gray-500 rounded hover:bg-gray-50 hover:text-gray-700"
+                class="relative group flex justify-center px-1 py-1.5 text-gray-500 rounded hover:bg-gray-50 hover:text-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +123,7 @@
                 <span
                   class="absolute text-xs font-medium text-white bg-gray-900 left-full ml-4 px-2 py-1.5 top-1/2 -translate-y-1/2 rounded opacity-0 group-hover:opacity-100"
                 >
-                  Account
+                  About
                 </span>
               </a>
             </li>
@@ -160,10 +133,10 @@
     </div>
   
     <div class="sticky inset-x-0 bottom-0 p-2 bg-white border-t border-slate-600">
-      <form action="/logout">
-        <button
-          type="submit"
-          class="flex justify-center w-full px-2 py-1.5 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700 group relative"
+      
+        <a
+          href="https://github.com/fataranto/fototecaStarterTailwind"
+          class="flex justify-center w-full px-1 py-1.5 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700 group relative"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -176,16 +149,18 @@
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              
             />
           </svg>
   
           <span
             class="absolute text-xs font-medium text-white bg-gray-900 left-full ml-4 px-2 py-1.5 top-1/2 -translate-y-1/2 rounded opacity-0 group-hover:opacity-100"
           >
-            Logout
+            Github
           </span>
-        </button>
-      </form>
+        </a>
+      
     </div>
   </div>

@@ -3,6 +3,7 @@
 [Tailwind Forms Plugin](https://github.com/tailwindlabs/tailwindcss-forms)
 [Hyper UI - Free Tailwind Components](https://www.hyperui.dev/)
 [Image url validator](https://www.npmjs.com/package/image-url-validator)
+[Tailwind Toolbox - icons](https://www.tailwindtoolbox.com/icons)
 
 
 Consigna
@@ -12,7 +13,7 @@ hover - ok
 resaltado página activa - ok
 
 -Agregar imagen
-form - título - ok - preguntar si se puede permitir un espacio
+form - título - ok - preguntar si se puede permitir un espacio y si pueden ser más caracteres ("blue sea anemone" son 16)
 form - url
     -validación por expresiones regulares - ok
     -validación por imagen válida - ok (no es un requerimiento)
@@ -41,9 +42,18 @@ mostrar el código rgb de cada color de la paleta
 
 mostrar respuestas tanto de error como de confirmación de que la imagen se ha subido correctamente (también puede estar bien solo enviarlo a la home)
 
+mostrar un elemento mientras se está cargando la imagen y desactivar el botón del formulario
+
+arreglar barra de navegación y definir iconos tanto para la barra como para la página de cada imagen
+
 BONUS
 Implementar un o més punts ajudarà en la nota general de la unitat formativa.
 Afegir la possiblitat d' esborrar una fotografía
 Afegir la possibilitat d' editar una fotografía
 Implementar la pràctica segons el patró Model Vista Controlador
 *********************************************************************
+
+
+
+
+d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"

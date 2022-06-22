@@ -63,10 +63,9 @@ app.get("/error", (req, res) => {
     res.render("404");
 })
 
+
+
 app.post('/imguploaded', async function (req, res) {
-
-
-
 
 let imgURL = req.body.url
 

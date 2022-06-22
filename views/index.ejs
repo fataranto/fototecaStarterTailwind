@@ -7,13 +7,18 @@
 
 <body class="bg-slate-800">
     <h1 class="text-center text-3xl text-slate-400 font-bold pt-4">My Beautiful Gallery</h1>
-    
-<%- include('./partials/side'); %>
 
+    <%- include('./partials/side'); %>
+
+    <!-- the gallery -->
     <section class="flex justify-center w-screen flex-wrap px-24">
-        <% pics.forEach(function(p) { %>
-        <div class="font-sans m-2 drop-shadow-md hover:drop-shadow-xl bg-slate-700/70 hover:bg-slate-700 p-3">
-            <img class="h-36" src="<%= p.URL %>" alt="">
+        <% pics.forEach(function(p,i) { %>
+        <div class="font-sans m-2 drop-shadow-md hover:drop-shadow-xl bg-slate-700/70 hover:bg-slate-700 p-3 cursor-pointer"
+            id="<%= i %>_<%= ((p.title).replace(/\s/g, '_')).toLowerCase() %>" data-name="<%= p.title %>"
+            data-url="<%= p.URL %>" data-date="<%= p.date %>" data-color1="<%= p.pallete[0] %>"
+            data-color2="<%= p.pallete[1] %>" data-color3="<%= p.pallete[2] %>" data-color4="<%= p.pallete[3] %>"
+            data-bs-toggle="modal" data-bs-target="#exampleModalXl">
+            <img class="h-36" src="<%= p.URL %>" alt="<%= p.title %>">
             <p class="uppercase text-center text-slate-400 pt-2 tracking-widest text-sm">
                 <%= p.title %>
 
@@ -25,7 +30,7 @@
                 <div class="w-4 h-4" style="background-color: rgb(<%= p.pallete[0] %>)"></div>
                 <div class="w-4 h-4" style="background-color: rgb(<%= p.pallete[1] %>)"></div>
                 <div class="w-4 h-4" style="background-color: rgb(<%= p.pallete[2] %>)"></div>
-                <div class="w-4 h-4" style="background-color: rgb(<%= p.pallete[3] %>)"></div>                
+                <div class="w-4 h-4" style="background-color: rgb(<%= p.pallete[3] %>)"></div>
             </div>
 
         </div>
@@ -33,6 +38,92 @@
         <% }); %>
     </section>
 
+
+
+    <!-- image detailed info - modal -->
+    <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-800/80"
+        id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-xl relative w-full h-full pointer-events-none flex justify-center items-center">
+            
+                <div
+                    class="modal-content border-none shadow-lg relative flex flex-col pointer-events-auto  bg-clip-padding rounded-md outline-none text-current bg-slate-700/95 p-3">
+
+                    <div
+                        class="modal-header flex flex-shrink-0 items-center justify-end p-4 border-b border-slate-600 rounded-t-md">
+                        <button type="button"
+                            class="btn-close box-content w-4 h-4 p-1 pr-5 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-white hover:opacity-75 hover:no-underline"
+                            data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                    <section class="flex justify-center justify-items-center">
+                        <div>
+                            <img class="h-[32rem] w-auto" src="" alt="" id="adm_img">
+                        </div>
+                        <div class="ml-10 mr-10">
+                            <h3 id="adm_title"></h3>
+                            <p id="adm_date"></p>
+                            <div class="flex flex-col justify-center mt-2 ">
+                                <div id="adm_col1" class="w-36 h-8"></div>
+                                <div id="adm_col2" class="w-36 h-8"></div>
+                                <div id="adm_col3" class="w-36 h-8"></div>
+                                <div id="adm_col4" class="w-36 h-8"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            
+        </div>
+    </div>
+
+
+    <script>
+        const gallery = document.querySelectorAll("section>div");
+        console.log(gallery);
+
+        gallery.forEach(function (p) {
+            p.addEventListener("click", () => {
+                //e.preventDefault();
+                let id = p.attributes.id.nodeValue;
+                let title = p.attributes[2].nodeValue;
+                let url = p.attributes[3].nodeValue;
+                let date = p.attributes[4].nodeValue;
+                let color1 = p.attributes[5].nodeValue;
+                let color2 = p.attributes[6].nodeValue;
+                let color3 = p.attributes[7].nodeValue;
+                let color4 = p.attributes[8].nodeValue;
+
+
+                console.table(id, name, url, date, color1, color2, color3, color4);
+
+                let adm_img = document.querySelector("#adm_img");
+                adm_img.src = url;
+
+                let adm_title = document.querySelector("#adm_title");
+                adm_title.textContent = title;
+
+                let adm_date = document.querySelector("#adm_date");
+                adm_date.textContent = date;
+
+                let adm_col1 = document.querySelector("#adm_col1");
+                adm_col1.style.backgroundColor = `rgb(${color1})`;
+                adm_col1.textContent = `rgb(${color1})`;
+
+                let adm_col2 = document.querySelector("#adm_col2");
+                adm_col2.style.backgroundColor = `rgb(${color2})`;
+                adm_col2.textContent = `rgb(${color2})`;
+
+                let adm_col3 = document.querySelector("#adm_col3");
+                adm_col3.style.backgroundColor = `rgb(${color3})`;
+                adm_col3.textContent = `rgb(${color3})`;
+
+                let adm_col4 = document.querySelector("#adm_col4");
+                adm_col4.style.backgroundColor = `rgb(${color4})`;
+                adm_col4.textContent = `rgb(${color4})`;
+                
+                
+            })
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 
 </html>

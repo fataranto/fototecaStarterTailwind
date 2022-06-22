@@ -128,38 +128,6 @@
     ]
   },
   {
-    "title": "Blue Sea Anemone",
-    "URL": "https://images.pexels.com/photos/3204596/pexels-photo-3204596.jpeg",
-    "date": "2022-01-02",
-    "pallete": [
-      [
-        8,
-        17,
-        38
-      ],
-      [
-        58,
-        94,
-        202
-      ],
-      [
-        123,
-        164,
-        247
-      ],
-      [
-        36,
-        64,
-        128
-      ],
-      [
-        134,
-        106,
-        146
-      ]
-    ]
-  },
-  {
     "title": "Fruits",
     "URL": "https://cdn.pixabay.com/photo/2016/06/20/13/16/greengrocers-1468809_960_720.jpg",
     "date": "2021-06-20",
@@ -252,6 +220,38 @@
         187,
         179,
         180
+      ]
+    ]
+  },
+  {
+    "title": "Buildings",
+    "URL": "https://randomwordgenerator.com/img/picture-generator/53e1d7444d53af14f1dc8460962e33791c3ad6e04e507440742a7ad19f4cc0_640.jpg",
+    "date": "2020-09-18",
+    "pallete": [
+      [
+        65,
+        95,
+        134
+      ],
+      [
+        207,
+        200,
+        200
+      ],
+      [
+        20,
+        22,
+        30
+      ],
+      [
+        130,
+        200,
+        210
+      ],
+      [
+        135,
+        158,
+        209
       ]
     ]
   }
