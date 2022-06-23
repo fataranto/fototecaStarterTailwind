@@ -55,7 +55,7 @@ app.get("/", (req, res) => {
 
 app.get("/upload", (req, res) => {
     res.render("form", {
-        page_name: 'upload'
+        page_name: 'upload' //siempre tiene que ser un objeto, incluso si es solo una variable
     });
 })
 
