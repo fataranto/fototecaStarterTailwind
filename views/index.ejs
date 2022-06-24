@@ -63,7 +63,10 @@
                             <p onclick="spanSwitch(this)" class="uppercase text-slate-400 tracking-widest text-xl"
                                 id="adm_title"></p>
                         </div>
-                        <p class="text-sm text-slate-400 tracking-wider" id="adm_date"></p>
+                        <div id="edDate">
+                            <p onclick="spanSwitch(this)" class="text-sm text-slate-400 tracking-wider" id="adm_date">
+                            </p>
+                        </div>
                         <div class="flex flex-col justify-center mt-6 ">
                             <div id="adm_col1" class="w-36 h-8"></div>
                             <div id="adm_col2" class="w-36 h-8"></div>
@@ -79,52 +82,51 @@
 
 
     <script>
-
         //function to open a fullscreen modal to see more information and edit an image
+        let activeImage = {};
         const gallery = document.querySelectorAll("#mainGallery>.each");
-        console.log(gallery);
+
+        // console.log(gallery);
 
         gallery.forEach(function (p) {
-            console.log(p);
+            //console.log(p);
             p.addEventListener("click", (e) => {
-                console.log(e.target);
-                //e.preventDefault();
-                let id = p.attributes.id.nodeValue;
-                let title = p.attributes[2].nodeValue;
-                let url = p.attributes[3].nodeValue;
-                let date = p.attributes[4].nodeValue;
-                let color1 = p.attributes[5].nodeValue;
-                let color2 = p.attributes[6].nodeValue;
-                let color3 = p.attributes[7].nodeValue;
-                let color4 = p.attributes[8].nodeValue;
 
 
-                console.table(id, name, url, date, color1, color2, color3, color4);
+                activeImage.id = p.id;
+                activeImage.title = p.dataset.name;
+                activeImage.url = p.dataset.url;
+                activeImage.date = p.dataset.date;
+                activeImage.color1 = p.dataset.color1;
+                activeImage.color2 = p.dataset.color2;
+                activeImage.color3 = p.dataset.color3;
+                activeImage.color4 = p.dataset.color4;
+
 
                 let adm_img = document.querySelector("#adm_img");
-                adm_img.src = url;
+                adm_img.src = activeImage.url;
 
                 let adm_title = document.querySelector("#adm_title");
-                adm_title.textContent = title;
+                adm_title.textContent = activeImage.title;
 
                 let adm_date = document.querySelector("#adm_date");
-                adm_date.textContent = date;
+                adm_date.textContent = activeImage.date;
 
                 let adm_col1 = document.querySelector("#adm_col1");
-                adm_col1.style.backgroundColor = `rgb(${color1})`;
-                adm_col1.textContent = `rgb(${color1})`;
+                adm_col1.style.backgroundColor = `rgb(${activeImage.color1})`;
+                adm_col1.textContent = `rgb(${activeImage.color1})`;
 
                 let adm_col2 = document.querySelector("#adm_col2");
-                adm_col2.style.backgroundColor = `rgb(${color2})`;
-                adm_col2.textContent = `rgb(${color2})`;
+                adm_col2.style.backgroundColor = `rgb(${activeImage.color2})`;
+                adm_col2.textContent = `rgb(${activeImage.color2})`;
 
                 let adm_col3 = document.querySelector("#adm_col3");
-                adm_col3.style.backgroundColor = `rgb(${color3})`;
-                adm_col3.textContent = `rgb(${color3})`;
+                adm_col3.style.backgroundColor = `rgb(${activeImage.color3})`;
+                adm_col3.textContent = `rgb(${activeImage.color3})`;
 
                 let adm_col4 = document.querySelector("#adm_col4");
-                adm_col4.style.backgroundColor = `rgb(${color4})`;
-                adm_col4.textContent = `rgb(${color4})`;
+                adm_col4.style.backgroundColor = `rgb(${activeImage.color4})`;
+                adm_col4.textContent = `rgb(${activeImage.color4})`;
 
 
             })
@@ -133,18 +135,95 @@
         //the following two functions make the title editable onclick
         function spanSwitch(e) {
             let txt = e.innerText;
-            let edTit = document.getElementById('edTit');
+            let edTit = e.parentNode;
+            //console.log(e);
 
-            edTit.innerHTML = `<input onblur='spanReset(this)' value='${txt}' />`;
-            document.getElementsByTagName('input')[0].focus();
+            if (e.id == "adm_title") {
+                edTit.innerHTML = `<input 
+                            id='input_title'
+                            onblur='spanReset(this)'
+                            type="text" 
+                            class="
+                              mt-1
+                              block
+                              w-full
+                              rounded-md
+                              border-gray-300
+                              shadow-sm
+                              focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
+                            "
+                            value='${txt}'  
+                            pattern="[a-zA-Z0-9\s]+" 
+                            minlength=2 
+                            maxlength="10" 
+                            title="The title should be between 2 and 10 characters and it may only contain letters, numbers and spaces" 
+                            required>`
+                document.getElementsByTagName('input')[0].focus();
+            } else {
+                edTit.innerHTML = `<input 
+                            id='input_date'
+                            onblur='spanReset(this)'
+                            type="date" 
+                            class="
+                              mt-1
+                              block
+                              w-full
+                              rounded-md
+                              border-gray-300
+                              shadow-sm
+                              focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
+                            " 
+                            value='${txt}' 
+                            required>`;
+                document.getElementsByTagName('input')[0].focus();
+            }
+
+
         }
 
         function spanReset(e) {
-            let txt = e.value;
-            let edTit = document.getElementById('edTit');
+            let edit = e.parentNode;
+            let galImg = document.querySelector(`div[id="${activeImage.id}"]`); 
+            let galImgEdit;
+                       
 
-            edTit.innerHTML = `<p onclick="spanSwitch(this)" class="uppercase text-slate-400 tracking-widest text-xl"
-                                id="adm_title">${txt}</p>`;
+            if (e.id == "input_title") {
+            galImgEdit = document.querySelector(`div[id="${activeImage.id}"] p:nth-child(2)`);
+                let newTitle;
+                if (!e.value) {
+                    newTitle = activeImage.title
+                } else {
+                    newTitle = e.value;
+                }
+
+                edit.innerHTML = `<p 
+            onclick="spanSwitch(this)" 
+            class="uppercase text-slate-400 tracking-widest text-xl"
+            id="adm_title">${newTitle}</p>`;
+                galImgEdit.textContent = newTitle;
+                galImg.dataset.name = newTitle;
+                activeImage.title = newTitle;
+            } else {
+                
+                galImgEdit = document.querySelector(`div[id="${activeImage.id}"] p:nth-child(3)`)
+                let newDate
+
+                if (!e.value) {
+                    newDate = activeImage.date
+                } else {
+                    newDate = e.value;
+                }
+
+                edit.innerHTML = `<p 
+                onclick="spanSwitch(this)" 
+                class="text-sm text-slate-400 tracking-wider" 
+                id="adm_date">${newDate}</p>`;
+                galImgEdit.textContent = newDate;
+                galImg.dataset.date = newDate;
+                activeImage.date = newDate;
+            }
+
+
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
