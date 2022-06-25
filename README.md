@@ -49,6 +49,8 @@ arreglar barra de navegación y definir iconos tanto para la barra como para la 
 
 hacer página "about"
 
+ver de que las imágenes tengan el mismo ancho en la versión mobile
+
 BONUS
 Implementar un o més punts ajudarà en la nota general de la unitat formativa.
 Afegir la possiblitat d' esborrar una fotografía

@@ -39,7 +39,7 @@ nextId = function () {
 
 const myColorPallete = (async (imageURL) => {
     const colorPallete = await getPaletteFromURL(imageURL);
-    console.log(colorPallete);
+    //console.log(colorPallete);
 
     return colorPallete;
 
@@ -53,7 +53,7 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({
     extended: false
-})); //get data from form vis POST
+})); //get data from form via POST
 
 app.get("/", (req, res) => {
     sortPics();
@@ -119,7 +119,21 @@ app.post('/imguploaded', async function (req, res) {
         return is_image
     });
 
-    if (isImage) {
+    let notInDataBase = true;
+
+//console.log("isImage", isImage);
+
+    pictures.filter((obj, i) => {
+        if (obj.URL == imgURL) {
+            //console.log("imagen repetida: ", imgURL);
+            notInDataBase = false
+        }
+
+    })
+
+    //console.log("notInDataBase", notInDataBase);
+
+    if (isImage && notInDataBase) {
         let cPallete = await myColorPallete(imgURL);
 
         let myNewPic = {
@@ -140,43 +154,6 @@ app.post('/imguploaded', async function (req, res) {
         res.redirect("/error");
     }
 
-
-
-
-
-
-
-
-    //isMyURL();
-
-
-
-    /*
-    if (isMyURL) {
-        cPallete = await myColorPallete(req.body.url);
-
-        let myNewPic = {
-            title: req.body.title,
-            URL: req.body.url,
-            date: req.body.date,
-            pallete: cPallete
-        }
-
-        pictures.push(myNewPic);
-                    
-                        let data = JSON.stringify(pictures, null, 2);
-                        fs.writeFileSync('photospallete.json', data); 
-
-                        res.redirect("/");
-
-
-
-    } else {
-
-        res.redirect("/error");
-
-    }
-    */
 });
 
 

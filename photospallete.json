@@ -1,34 +1,100 @@
 [
   {
-    "id": 12,
-    "title": "GATITo",
-    "URL": "https://images.hola.com/imagenes/mascotas/20180925130054/consejos-para-cuidar-a-un-gatito-recien-nacido-cs/0-601-526/cuidardgatito-t.jpg",
-    "date": "2022-06-16",
+    "id": 15,
+    "title": "butterfly",
+    "URL": "https://fibrolandiablog.files.wordpress.com/2017/05/el38.jpg",
+    "date": "2022-06-10",
     "pallete": [
       [
-        229,
-        223,
-        217
+        197,
+        199,
+        199
       ],
       [
-        203,
-        144,
-        90
+        47,
+        50,
+        60
       ],
       [
-        215,
-        174,
-        135
+        122,
+        66,
+        66
       ],
       [
-        158,
+        121,
+        128,
+        129
+      ],
+      [
+        136,
+        108,
+        84
+      ]
+    ]
+  },
+  {
+    "id": 13,
+    "title": "tripie",
+    "URL": "https://m.media-amazon.com/images/I/7173jMSNUJL._SS500_.jpg",
+    "date": "2022-06-09",
+    "pallete": [
+      [
+        116,
+        193,
+        156
+      ],
+      [
+        153,
+        97,
+        166
+      ],
+      [
+        146,
+        153,
+        62
+      ],
+      [
+        40,
+        130,
+        125
+      ],
+      [
+        198,
+        180,
+        96
+      ]
+    ]
+  },
+  {
+    "id": 14,
+    "title": "SUPER TRIP",
+    "URL": "https://1.bp.blogspot.com/-xaSPzfKoyjA/XWvtQt6-XwI/AAAAAAAACwc/H_16ejpXB7g1P2YG0bRI4Ev5zb86N59vwCLcBGAs/s1600/gatito%2B1.jpg",
+    "date": "2022-06-09",
+    "pallete": [
+      [
+        178,
+        198,
+        202
+      ],
+      [
+        41,
         104,
-        64
+        55
       ],
       [
-        88,
-        75,
+        105,
+        154,
+        165
+      ],
+      [
+        102,
+        77,
         71
+      ],
+      [
+        114,
+        127,
+        79
       ]
     ]
   },
@@ -67,7 +133,7 @@
   },
   {
     "id": 2,
-    "title": "Blue Eyes",
+    "title": "BLUE EYES",
     "URL": "https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg",
     "date": "2022-04-02",
     "pallete": [
@@ -132,101 +198,68 @@
     ]
   },
   {
-    "id": 13,
-    "title": "tripie",
-    "URL": "https://m.media-amazon.com/images/I/7173jMSNUJL._SS500_.jpg",
-    "date": "2022-06-09",
+    "id": 16,
+    "title": "hipster",
+    "URL": "http://alternopolis.com/wp-content/uploads/2014/02/hipstercat2.jpg",
+    "date": "2016-06-16",
     "pallete": [
       [
-        116,
-        193,
-        156
+        167,
+        178,
+        151
       ],
       [
-        153,
-        97,
-        166
+        34,
+        26,
+        18
       ],
       [
-        146,
-        153,
-        62
+        81,
+        58,
+        35
       ],
       [
-        40,
-        130,
-        125
+        106,
+        90,
+        50
       ],
       [
-        198,
-        180,
+        103,
+        120,
         96
       ]
     ]
   },
   {
-    "id": 14,
-    "title": "super trip",
-    "URL": "https://1.bp.blogspot.com/-xaSPzfKoyjA/XWvtQt6-XwI/AAAAAAAACwc/H_16ejpXB7g1P2YG0bRI4Ev5zb86N59vwCLcBGAs/s1600/gatito%2B1.jpg",
-    "date": "2022-06-09",
+    "id": 19,
+    "title": "Party",
+    "URL": "https://media.salon.com/2022/05/cats-party-0516221.jpg",
+    "date": "2022-04-08",
     "pallete": [
       [
-        178,
-        198,
-        202
+        72,
+        83,
+        39
       ],
       [
-        41,
-        104,
-        55
+        208,
+        161,
+        74
       ],
       [
-        105,
-        154,
-        165
+        160,
+        118,
+        43
       ],
       [
-        102,
-        77,
-        71
+        163,
+        139,
+        163
       ],
       [
-        114,
-        127,
-        79
-      ]
-    ]
-  },
-  {
-    "id": 15,
-    "title": "mariposin",
-    "URL": "https://fibrolandiablog.files.wordpress.com/2017/05/el38.jpg",
-    "date": "2022-06-10",
-    "pallete": [
-      [
-        197,
-        199,
-        199
-      ],
-      [
-        47,
-        50,
-        60
-      ],
-      [
-        122,
-        66,
-        66
-      ],
-      [
-        121,
-        128,
-        129
-      ],
-      [
-        136,
-        108,
-        84
+        172,
+        183,
+        161
       ]
     ]
   }
