@@ -14,7 +14,9 @@
     <section id="mainGallery" class="flex justify-center w-screen flex-wrap px-24">
         <% pics.forEach(function(p,i) { %>
         <div class="each font-sans m-2 drop-shadow-md hover:drop-shadow-xl bg-slate-700/70 hover:bg-slate-700 p-3 cursor-pointer flex-shrink-0"
-            id="<%= i %>_<%= ((p.title).replace(/\s/g, '_')).toLowerCase() %>" data-name="<%= p.title %>"
+            id="<%= p.id %>_<%= ((p.title).replace(/\s/g, '_')).toLowerCase() %>" 
+            data-id="<%= p.id %>"
+            data-name="<%= p.title %>"
             data-url="<%= p.URL %>" data-date="<%= p.date %>" data-color1="<%= p.pallete[0] %>"
             data-color2="<%= p.pallete[1] %>" data-color3="<%= p.pallete[2] %>" data-color4="<%= p.pallete[3] %>"
             data-bs-toggle="modal" data-bs-target="#exampleModalXl">
@@ -73,6 +75,8 @@
                             <div id="adm_col3" class="w-36 h-8"></div>
                             <div id="adm_col4" class="w-36 h-8"></div>
                         </div>
+                        <a id="adm_delete">Delete</a>
+                        <a id="adm_save">Save</a>
                     </div>
                 </section>
             </div>
@@ -94,6 +98,7 @@
 
 
                 activeImage.id = p.id;
+                activeImage.baseId = p.dataset.id;
                 activeImage.title = p.dataset.name;
                 activeImage.url = p.dataset.url;
                 activeImage.date = p.dataset.date;
@@ -128,6 +133,11 @@
                 adm_col4.style.backgroundColor = `rgb(${activeImage.color4})`;
                 adm_col4.textContent = `rgb(${activeImage.color4})`;
 
+                let adm_delete = document.querySelector("#adm_delete");
+                adm_delete.href = `/update?q=delete&id=${activeImage.baseId}`;
+
+                
+
 
             })
         })
@@ -153,7 +163,7 @@
                               focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
                             "
                             value='${txt}'  
-                            pattern="[a-zA-Z0-9\s]+" 
+                            pattern="^[a-zA-Z0-9 ]*$" 
                             minlength=2 
                             maxlength="10" 
                             title="The title should be between 2 and 10 characters and it may only contain letters, numbers and spaces" 
@@ -183,14 +193,18 @@
 
         function spanReset(e) {
             let edit = e.parentNode;
-            let galImg = document.querySelector(`div[id="${activeImage.id}"]`); 
+            let galImg = document.querySelector(`div[id="${activeImage.id}"]`);
             let galImgEdit;
-                       
+
 
             if (e.id == "input_title") {
-            galImgEdit = document.querySelector(`div[id="${activeImage.id}"] p:nth-child(2)`);
+                galImgEdit = document.querySelector(`div[id="${activeImage.id}"] p:nth-child(2)`);
+                
                 let newTitle;
-                if (!e.value) {
+
+
+                if (!e.checkValidity()) {
+                    e.reportValidity();
                     newTitle = activeImage.title
                 } else {
                     newTitle = e.value;
@@ -204,7 +218,7 @@
                 galImg.dataset.name = newTitle;
                 activeImage.title = newTitle;
             } else {
-                
+
                 galImgEdit = document.querySelector(`div[id="${activeImage.id}"] p:nth-child(3)`)
                 let newDate
 
@@ -222,6 +236,9 @@
                 galImg.dataset.date = newDate;
                 activeImage.date = newDate;
             }
+
+            let adm_save = document.querySelector("#adm_save");
+                adm_save.href = `/update?q=update&id=${activeImage.baseId}&title=${activeImage.title}&date=${activeImage.date}`;
 
 
         }

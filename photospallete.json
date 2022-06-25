@@ -1,37 +1,72 @@
 [
   {
-    "title": "Green Snake",
-    "URL": "https://cdn.pixabay.com/photo/2016/08/31/18/19/snake-1634293_960_720.jpg",
-    "date": "2022-06-04",
+    "id": 12,
+    "title": "GATITo",
+    "URL": "https://images.hola.com/imagenes/mascotas/20180925130054/consejos-para-cuidar-a-un-gatito-recien-nacido-cs/0-601-526/cuidardgatito-t.jpg",
+    "date": "2022-06-16",
     "pallete": [
       [
-        51,
-        62,
-        7
+        229,
+        223,
+        217
       ],
       [
-        197,
-        189,
-        102
+        203,
+        144,
+        90
       ],
       [
-        136,
-        132,
-        48
+        215,
+        174,
+        135
       ],
       [
-        151,
-        182,
-        60
+        158,
+        104,
+        64
       ],
       [
-        147,
-        156,
-        142
+        88,
+        75,
+        71
       ]
     ]
   },
   {
+    "id": 10,
+    "title": "BIg CAT",
+    "URL": "https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_960_720.jpg",
+    "date": "2022-06-01",
+    "pallete": [
+      [
+        39,
+        50,
+        30
+      ],
+      [
+        208,
+        187,
+        151
+      ],
+      [
+        135,
+        166,
+        104
+      ],
+      [
+        113,
+        119,
+        81
+      ],
+      [
+        124,
+        134,
+        160
+      ]
+    ]
+  },
+  {
+    "id": 2,
     "title": "Blue Eyes",
     "URL": "https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg",
     "date": "2022-04-02",
@@ -64,167 +99,8 @@
     ]
   },
   {
-    "title": "Cactus",
-    "URL": "https://randomwordgenerator.com/img/picture-generator/50e6d1414c50b10ff3d8992cc12c30771037dbf85254784e77267ed09444_640.jpg",
-    "date": "2022-03-19",
-    "pallete": [
-      [
-        18,
-        15,
-        13
-      ],
-      [
-        181,
-        175,
-        163
-      ],
-      [
-        119,
-        136,
-        126
-      ],
-      [
-        148,
-        63,
-        20
-      ],
-      [
-        115,
-        124,
-        133
-      ]
-    ]
-  },
-  {
-    "title": "Windows",
-    "URL": "https://randomwordgenerator.com/img/picture-generator/53e3d54a4c57a814f1dc8460962e33791c3ad6e04e507440762e7ad39344c4_640.jpg",
-    "date": "2022-02-05",
-    "pallete": [
-      [
-        58,
-        59,
-        56
-      ],
-      [
-        216,
-        216,
-        214
-      ],
-      [
-        175,
-        176,
-        172
-      ],
-      [
-        148,
-        148,
-        145
-      ],
-      [
-        165,
-        164,
-        172
-      ]
-    ]
-  },
-  {
-    "title": "Fruits",
-    "URL": "https://cdn.pixabay.com/photo/2016/06/20/13/16/greengrocers-1468809_960_720.jpg",
-    "date": "2021-06-20",
-    "pallete": [
-      [
-        176,
-        59,
-        26
-      ],
-      [
-        62,
-        50,
-        38
-      ],
-      [
-        223,
-        208,
-        88
-      ],
-      [
-        199,
-        159,
-        39
-      ],
-      [
-        167,
-        141,
-        157
-      ]
-    ]
-  },
-  {
-    "title": "Buildings",
-    "URL": "https://randomwordgenerator.com/img/picture-generator/53e1d7444d53af14f1dc8460962e33791c3ad6e04e507440742a7ad19f4cc0_640.jpg",
-    "date": "2020-09-18",
-    "pallete": [
-      [
-        65,
-        95,
-        134
-      ],
-      [
-        207,
-        200,
-        200
-      ],
-      [
-        20,
-        22,
-        30
-      ],
-      [
-        130,
-        200,
-        210
-      ],
-      [
-        135,
-        158,
-        209
-      ]
-    ]
-  },
-  {
-    "title": "Hidden kitty",
-    "URL": "https://randomwordgenerator.com/img/picture-generator/57e3d3444a52ac14f1dc8460962e33791c3ad6e04e50744172297cdd9f45c7_640.jpg",
-    "date": "2019-08-12",
-    "pallete": [
-      [
-        73,
-        120,
-        23
-      ],
-      [
-        140,
-        207,
-        58
-      ],
-      [
-        187,
-        232,
-        72
-      ],
-      [
-        22,
-        29,
-        16
-      ],
-      [
-        125,
-        127,
-        123
-      ]
-    ]
-  },
-  {
-    "title": "Little Panther",
+    "id": 8,
+    "title": "TITI",
     "URL": "https://cdn.pixabay.com/photo/2018/10/11/12/31/cat-3739702_960_720.jpg",
     "date": "2018-06-08",
     "pallete": [
@@ -256,34 +132,101 @@
     ]
   },
   {
-    "title": "Death Valley",
-    "URL": "https://cdn.pixabay.com/photo/2017/08/01/02/03/mountain-2562806_960_720.jpg",
-    "date": "2015-08-25",
+    "id": 13,
+    "title": "tripie",
+    "URL": "https://m.media-amazon.com/images/I/7173jMSNUJL._SS500_.jpg",
+    "date": "2022-06-09",
     "pallete": [
       [
+        116,
+        193,
+        156
+      ],
+      [
+        153,
+        97,
+        166
+      ],
+      [
+        146,
+        153,
+        62
+      ],
+      [
+        40,
+        130,
+        125
+      ],
+      [
+        198,
+        180,
+        96
+      ]
+    ]
+  },
+  {
+    "id": 14,
+    "title": "super trip",
+    "URL": "https://1.bp.blogspot.com/-xaSPzfKoyjA/XWvtQt6-XwI/AAAAAAAACwc/H_16ejpXB7g1P2YG0bRI4Ev5zb86N59vwCLcBGAs/s1600/gatito%2B1.jpg",
+    "date": "2022-06-09",
+    "pallete": [
+      [
+        178,
+        198,
+        202
+      ],
+      [
+        41,
+        104,
+        55
+      ],
+      [
+        105,
+        154,
+        165
+      ],
+      [
+        102,
+        77,
+        71
+      ],
+      [
+        114,
         127,
-        88,
+        79
+      ]
+    ]
+  },
+  {
+    "id": 15,
+    "title": "mariposin",
+    "URL": "https://fibrolandiablog.files.wordpress.com/2017/05/el38.jpg",
+    "date": "2022-06-10",
+    "pallete": [
+      [
+        197,
+        199,
+        199
+      ],
+      [
+        47,
+        50,
+        60
+      ],
+      [
+        122,
+        66,
         66
       ],
       [
-        211,
-        180,
-        137
+        121,
+        128,
+        129
       ],
       [
-        35,
-        32,
-        47
-      ],
-      [
-        182,
-        180,
-        154
-      ],
-      [
-        113,
-        139,
-        159
+        136,
+        108,
+        84
       ]
     ]
   }

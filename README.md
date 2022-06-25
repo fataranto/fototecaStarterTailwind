@@ -13,7 +13,7 @@ hover - ok
 resaltado página activa - ok
 
 -Agregar imagen
-form - título - ok - preguntar si se puede permitir un espacio y si pueden ser más caracteres ("blue sea anemone" son 16)
+form - título - ok - preguntar si se puede permitir un espacio y si pueden ser más caracteres ("blue sea anemone" son 16) - ok
 form - url
     -validación por expresiones regulares - ok
     -validación por imagen válida - ok (no es un requerimiento)
@@ -39,12 +39,15 @@ si la url ya existe:
 
 mostrar el código rgb de cada color de la paleta
 (a nivel BONUS) -> hacer que al clicar la imagen abra una ficha, puede ser un modal o una página nueva con la imagen ampliada y toda la información, incluir ahí el código RGB de la paleta y la posibilidad tanto de modificar los datos de la imagen como de eliminarla
+(falta dar estilo a los botones. El botón "save" se debe mostrar apagado y activarse solo cuando se ha modificado algún dato. Técnicamente funciona así, solo hay que trabajar sobre los estilos)
 
 mostrar respuestas tanto de error como de confirmación de que la imagen se ha subido correctamente (también puede estar bien solo enviarlo a la home)
 
 mostrar un elemento mientras se está cargando la imagen y desactivar el botón del formulario
 
 arreglar barra de navegación y definir iconos tanto para la barra como para la página de cada imagen
+
+hacer página "about"
 
 BONUS
 Implementar un o més punts ajudarà en la nota general de la unitat formativa.

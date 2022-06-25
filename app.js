@@ -4,12 +4,15 @@ const fs = require('fs');
 
 const app = express();
 
-const { getPaletteFromURL } = require('color-thief-node');
+const {
+    getPaletteFromURL
+} = require('color-thief-node');
 
 
 const pictures = JSON.parse(fs.readFileSync('./photospallete.json'));
 
 const isImageURL = require('image-url-validator').default;
+
 
 //sort pictures by date
 
@@ -23,6 +26,14 @@ sortPics = function () {
         }
         return 0;
     });
+}
+
+nextId = function () {
+    const ids = pictures.map(obj => {
+        return obj.id;
+    });
+    const nextId = Math.max(...ids) + 1;
+    return nextId;
 }
 
 
@@ -63,35 +74,72 @@ app.get("/error", (req, res) => {
     res.render("404");
 })
 
+app.get("/update", (req, res) => {
+    //console.log(req.query);
+    const q = req.query.q;
+    const id = req.query.id;
+    //res.send(id);
 
+    if (q == "delete") {
+        pictures.filter((obj, i) => {
+            if (obj.id == id) {
+                pictures.splice(i, 1)
+            }
+            return
+        })
+    }
+
+    if (q == "update") {
+        const title = req.query.title;
+        const date = req.query.date;
+        console.log(q,id,title,date);
+        pictures.filter((obj, i) => {
+            if (obj.id == id) {
+                pictures[i].title = title;
+                pictures[i].date = date;
+            }
+            return
+        })
+    }
+
+
+    let data = JSON.stringify(pictures, null, 2);
+    fs.writeFileSync('photospallete.json', data);
+
+    res.redirect("/");
+
+    //console.log(pictures);
+})
 
 app.post('/imguploaded', async function (req, res) {
 
-let imgURL = req.body.url
+    let imgURL = req.body.url
 
-let isImage = await isImageURL (imgURL).then(is_image => {
-    return is_image
-});
+    let isImage = await isImageURL(imgURL).then(is_image => {
+        return is_image
+    });
 
-if (isImage) {
-    let cPallete = await myColorPallete(imgURL);
+    if (isImage) {
+        let cPallete = await myColorPallete(imgURL);
 
-    let myNewPic = {
-        title: req.body.title,
-        URL: imgURL,
-        date: req.body.date,
-        pallete: cPallete
+        let myNewPic = {
+            id: nextId(),
+            title: req.body.title,
+            URL: imgURL,
+            date: req.body.date,
+            pallete: cPallete
+        }
+
+        pictures.push(myNewPic);
+
+        let data = JSON.stringify(pictures, null, 2);
+        fs.writeFileSync('photospallete.json', data);
+
+        res.redirect("/");
+    } else {
+        res.redirect("/error");
     }
 
-    pictures.push(myNewPic);
-                
-                    let data = JSON.stringify(pictures, null, 2);
-                    fs.writeFileSync('photospallete.json', data); 
-
-                    res.redirect("/");
-}else{
-    res.redirect("/error");
-}
 
 
 
@@ -99,41 +147,40 @@ if (isImage) {
 
 
 
-
-//isMyURL();
-
+    //isMyURL();
 
 
-/*
-if (isMyURL) {
-    cPallete = await myColorPallete(req.body.url);
 
-    let myNewPic = {
-        title: req.body.title,
-        URL: req.body.url,
-        date: req.body.date,
-        pallete: cPallete
+    /*
+    if (isMyURL) {
+        cPallete = await myColorPallete(req.body.url);
+
+        let myNewPic = {
+            title: req.body.title,
+            URL: req.body.url,
+            date: req.body.date,
+            pallete: cPallete
+        }
+
+        pictures.push(myNewPic);
+                    
+                        let data = JSON.stringify(pictures, null, 2);
+                        fs.writeFileSync('photospallete.json', data); 
+
+                        res.redirect("/");
+
+
+
+    } else {
+
+        res.redirect("/error");
+
     }
-
-    pictures.push(myNewPic);
-                
-                    let data = JSON.stringify(pictures, null, 2);
-                    fs.writeFileSync('photospallete.json', data); 
-
-                    res.redirect("/");
-
-
-
-} else {
-
-    res.redirect("/error");
-
-}
-*/
+    */
 });
 
-                    
-                    
+
+
 
 
 
