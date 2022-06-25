@@ -33,6 +33,39 @@
     ]
   },
   {
+    "id": 23,
+    "title": "CAT FIGHt",
+    "URL": "https://www.lalocadelosgatos.com/wp-content/uploads/2013/09/Funny-Cats-Fight-Wallpaper.jpg",
+    "date": "2022-06-10",
+    "pallete": [
+      [
+        53,
+        45,
+        27
+      ],
+      [
+        186,
+        168,
+        150
+      ],
+      [
+        132,
+        107,
+        83
+      ],
+      [
+        155,
+        148,
+        122
+      ],
+      [
+        155,
+        148,
+        141
+      ]
+    ]
+  },
+  {
     "id": 13,
     "title": "tripie",
     "URL": "https://m.media-amazon.com/images/I/7173jMSNUJL._SS500_.jpg",
@@ -132,6 +165,39 @@
     ]
   },
   {
+    "id": 19,
+    "title": "Party",
+    "URL": "https://media.salon.com/2022/05/cats-party-0516221.jpg",
+    "date": "2022-04-08",
+    "pallete": [
+      [
+        72,
+        83,
+        39
+      ],
+      [
+        208,
+        161,
+        74
+      ],
+      [
+        160,
+        118,
+        43
+      ],
+      [
+        163,
+        139,
+        163
+      ],
+      [
+        172,
+        183,
+        161
+      ]
+    ]
+  },
+  {
     "id": 2,
     "title": "BLUE EYES",
     "URL": "https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg",
@@ -227,39 +293,6 @@
         103,
         120,
         96
-      ]
-    ]
-  },
-  {
-    "id": 19,
-    "title": "Party",
-    "URL": "https://media.salon.com/2022/05/cats-party-0516221.jpg",
-    "date": "2022-04-08",
-    "pallete": [
-      [
-        72,
-        83,
-        39
-      ],
-      [
-        208,
-        161,
-        74
-      ],
-      [
-        160,
-        118,
-        43
-      ],
-      [
-        163,
-        139,
-        163
-      ],
-      [
-        172,
-        183,
-        161
       ]
     ]
   }

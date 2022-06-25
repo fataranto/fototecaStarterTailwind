@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <head>
     <%- include('./partials/head'); %>
+  </head>
 </head>
-</head>
+
 <body class="bg-slate-800">
-    <div class="antialiased text-gray-900 px-6">
-        <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
-            <div class="py-12">
-              <h2 class="text-center text-2xl text-slate-400 font-bold pt-4 tracking-wider">Add your favourite picture!</h2>
-              <%- include('./partials/side'); %>
-                <div class="mt-8 max-w-full flex justify-center">
-                  <form class="form w-6/12" method="post" action="/imguploaded">
-                    
-                      <div class="grid grid-cols-1 gap-6">
-                        <label class="block" for="title">
-                          <span class="text-slate-400">Title</span>
-                          <input type="text" class="
+  <div class="antialiased text-gray-900 px-6">
+    <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
+      <div class="py-12">
+        <h2 class="text-center text-2xl text-slate-400 font-bold pt-4 tracking-wider">Add your favourite picture!</h2>
+        <%- include('./partials/side'); %>
+        <div class="mt-8 max-w-full flex justify-center">
+          <form class="form w-6/12" method="post" action="/imgupload">
+
+            <div class="grid grid-cols-1 gap-6">
+              <label class="block" for="title">
+                <span class="text-slate-400">Title</span>
+                <input type="text" class="
                               mt-1
                               block
                               w-full
@@ -25,11 +28,14 @@
                               border-gray-300
                               shadow-sm
                               focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
-                            " placeholder="Title" value="" name="title" id="title" pattern="[a-zA-Z0-9\s]+" minlength=2 maxlength="10" title="The title should be between 2 and 10 characters and it may only contain letters, numbers or an underscore" required>
-                        </label>
-                        <label class="block" for="url">
-                          <span class="text-slate-400">URL</span>
-                          <input type="text" class="
+                            " placeholder="Title" value="" name="title" id="title" pattern="[a-zA-Z0-9\s]+" minlength=2
+                  maxlength="10"
+                  title="The title should be between 2 and 10 characters and it may only contain letters, numbers or an underscore"
+                  required>
+              </label>
+              <label class="block" for="url">
+                <span class="text-slate-400">URL</span>
+                <input type="text" class="
                               mt-1
                               block
                               w-full
@@ -37,11 +43,14 @@
                               border-gray-300
                               shadow-sm
                               focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
-                            " placeholder="url" value="" name="url" id="url" pattern="^https?:\/\/[\w\\%\.\/-]+(\.jpeg|\.jpg|\.png|\.webp)$" minlegth=6 title="URL should start with 'http' and contain a valid image format; only .png, .jpeg, .jpg and .webp are valid" required>
-                        </label>
-                        <label class="block" for="date">
-                          <span class="text-slate-400">Date</span>
-                          <input type="date" class="
+                            " placeholder="url" value="" name="url" id="url"
+                  pattern="^https?:\/\/[\w\\%\.\/-]+(\.jpeg|\.jpg|\.png|\.webp)$" minlegth=6
+                  title="URL should start with 'http' and contain a valid image format; only .png, .jpeg, .jpg and .webp are valid"
+                  required>
+              </label>
+              <label class="block" for="date">
+                <span class="text-slate-400">Date</span>
+                <input type="date" class="
                               mt-1
                               block
                               w-full
@@ -50,16 +59,42 @@
                               shadow-sm
                               focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-slate-400
                             " value="" name="date" id="date" required>
-                        </label>
-                        <div class="block">
-                            <button class="px-4 py-2 font-semibold text-sm bg-sky-900 hover:bg-sky-700 text-slate-400 hover:text-slate-200 rounded-lg shadow-sm">Submit</button>
-                          </div>
-                        </div>
-                  </form>
-                  </div>
-                </div>
+              </label>
+              <div class="block">
+                <button
+                  class="px-4 py-2 font-semibold text-sm bg-sky-900 hover:bg-sky-700 text-slate-400 hover:text-slate-200 rounded-lg shadow-sm">Submit</button>
               </div>
+            </div>
+          </form>
         </div>
 
+        <div class=" flex justify-center
+        <% if(error == 1 || error == 2){ %>
+          visible
+        <% } else{ %>  
+          hidden
+       <% } %>
+        ">
+          <div class=" p-4 text-red-700 border rounded border-red-900/10 bg-red-50/60 mt-10 w-4/6" >
+          <p class="text-sm font-medium text-center"><strong> Something went wrong </strong></p>
+
+          <div class="mt-1 text-xs tracking-wide">
+            <% if(error == 1){ %>
+              It seems that the URL <span class="underline"><%=imgURL%></span> is not a valid image.
+            <% } else{ %>  
+              <div><img src="<%=imgURL%>" class="w-16 mr-3 float-left"></div>
+              <p class="">That's a very nice photo, but this image is already in our database</p>
+           <% } %>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
 </body>
+
 </html>

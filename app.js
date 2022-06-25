@@ -1,7 +1,7 @@
 const express = require('express');
 //const path = require('path');
 const fs = require('fs');
-
+const url = require('url');  
 const app = express();
 
 const {
@@ -12,6 +12,8 @@ const {
 const pictures = JSON.parse(fs.readFileSync('./photospallete.json'));
 
 const isImageURL = require('image-url-validator').default;
+
+let imgURL;
 
 
 //sort pictures by date
@@ -65,8 +67,32 @@ app.get("/", (req, res) => {
 })
 
 app.get("/upload", (req, res) => {
+
+   // console.log(req.query);
+    //let error = 0;
+   let errorCode = req.query.error;
+   let error = errorCode;
+   let message;
+
+    if (errorCode){
+
+        if(errorCode == 1){
+            message = `Something went wrong. It seems that the URL ${imgURL} is not a valid image`;
+        } else {
+            message = `That's a very nice photo, but the URL: ${imgURL} is already in our database`;
+        }
+
+        console.log(message);
+    }else{
+        console.log("no query, body");
+    }
+
+
+console.log(error);
     res.render("form", {
-        page_name: 'upload' //siempre tiene que ser un objeto, incluso si es solo una variable
+        page_name: 'upload', //siempre tiene que ser un objeto, incluso si es solo una variable
+        error: error,
+        imgURL: imgURL
     });
 })
 
@@ -111,13 +137,18 @@ app.get("/update", (req, res) => {
     //console.log(pictures);
 })
 
-app.post('/imguploaded', async function (req, res) {
+app.post('/imgupload', async function (req, res) {
 
-    let imgURL = req.body.url
+    let error = 0;
+    imgURL = req.body.url
 
     let isImage = await isImageURL(imgURL).then(is_image => {
+        if (!is_image) {
+            error = 1;
+        }
         return is_image
     });
+
 
     let notInDataBase = true;
 
@@ -127,6 +158,7 @@ app.post('/imguploaded', async function (req, res) {
         if (obj.URL == imgURL) {
             //console.log("imagen repetida: ", imgURL);
             notInDataBase = false
+            error = 2;
         }
 
     })
@@ -151,7 +183,13 @@ app.post('/imguploaded', async function (req, res) {
 
         res.redirect("/");
     } else {
-        res.redirect("/error");
+        //res.redirect("/upload");
+        res.redirect(url.format({
+            pathname:"/upload",
+            query: {
+               "error":error
+             }
+          }));
     }
 
 });
