@@ -826,6 +826,31 @@ select {
   background-color: currentColor;
 }
 
+.btn-primary {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(12 74 110 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.btn-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 105 161 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -999,6 +1024,14 @@ select {
   margin-top: 0.25rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -1027,16 +1060,8 @@ select {
   margin-top: 0px;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mr-3 {
-  margin-right: 0.75rem;
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .box-border {
@@ -1199,6 +1224,14 @@ select {
   width: 50%;
 }
 
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -1219,24 +1252,20 @@ select {
   width: 1.25rem;
 }
 
-.w-10 {
-  width: 2.5rem;
+.w-40 {
+  width: 10rem;
 }
 
-.w-20 {
-  width: 5rem;
+.w-48 {
+  width: 12rem;
 }
 
-.w-14 {
-  width: 3.5rem;
+.w-52 {
+  width: 13rem;
 }
 
-.w-16 {
-  width: 4rem;
-}
-
-.w-4\/6 {
-  width: 66.666667%;
+.w-56 {
+  width: 14rem;
 }
 
 .max-w-xl {
@@ -1273,6 +1302,10 @@ select {
 
 .grow {
   flex-grow: 1;
+}
+
+.basis-1\/2 {
+  flex-basis: 50%;
 }
 
 .table-auto {
@@ -2183,6 +2216,10 @@ select {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-red-900\/10 {
+  border-color: rgb(127 29 29 / 0.1);
+}
+
 .border-slate-600 {
   --tw-border-opacity: 1;
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
@@ -2190,10 +2227,6 @@ select {
 
 .border-transparent {
   border-color: transparent;
-}
-
-.border-red-900\/10 {
-  border-color: rgb(127 29 29 / 0.1);
 }
 
 .bg-gray-900 {
@@ -2233,6 +2266,10 @@ select {
 .bg-sky-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(12 74 110 / var(--tw-bg-opacity));
+}
+
+.bg-red-50\/60 {
+  background-color: rgb(254 242 242 / 0.6);
 }
 
 .bg-slate-700\/70 {
@@ -2277,17 +2314,9 @@ select {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-red-50 {
+.bg-slate-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
-}
-
-.bg-red-50\/80 {
-  background-color: rgb(254 242 242 / 0.8);
-}
-
-.bg-red-50\/60 {
-  background-color: rgb(254 242 242 / 0.6);
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\.\'\)\] {
@@ -2304,6 +2333,10 @@ select {
 
 .bg-\[url\(\"\.\.\.\"\)\2c url\(\"\.\.\.\"\)\] {
   background-image: url("..."),url("...");
+}
+
+.bg-\[url\(\'https\:\/\/excitedcats\.com\/wp-content\/uploads\/2021\/09\/Cat-Playing-Tissue_Shutterstock\.jpg\'\)\] {
+  background-image: url('https://excitedcats.com/wp-content/uploads/2021/09/Cat-Playing-Tissue_Shutterstock.jpg');
 }
 
 .decoration-slice {
@@ -2324,6 +2357,10 @@ select {
 .box-decoration-clone {
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
+}
+
+.bg-cover {
+  background-size: cover;
 }
 
 .bg-fixed {
@@ -2353,6 +2390,10 @@ select {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-repeat {
@@ -2442,6 +2483,10 @@ select {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .py-2 {
@@ -2537,6 +2582,10 @@ select {
 
 .pr-5 {
   padding-right: 1.25rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -2726,12 +2775,12 @@ select {
   letter-spacing: 0.05em;
 }
 
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
-
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .text-gray-500 {
@@ -2778,6 +2827,11 @@ select {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
 .text-blue-700 {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
@@ -2798,9 +2852,9 @@ select {
   color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 
-.text-red-700 {
+.text-slate-200 {
   --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
+  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3282,6 +3336,10 @@ select {
   opacity: 0.75;
 }
 
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
 .hover\:shadow-lg:hover {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -3468,6 +3526,14 @@ select {
 
   .sm\:h-60 {
     height: 15rem;
+  }
+
+  .sm\:h-36 {
+    height: 9rem;
+  }
+
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:underline {

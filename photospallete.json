@@ -66,6 +66,39 @@
     ]
   },
   {
+    "id": 25,
+    "title": "CAT FLIGHT",
+    "URL": "https://cattime.com/assets/uploads/gallery/amazing-cats-in-flight/cats-in-flight-1.jpg",
+    "date": "2022-06-10",
+    "pallete": [
+      [
+        198,
+        206,
+        219
+      ],
+      [
+        35,
+        42,
+        27
+      ],
+      [
+        113,
+        106,
+        64
+      ],
+      [
+        105,
+        138,
+        178
+      ],
+      [
+        87,
+        77,
+        44
+      ]
+    ]
+  },
+  {
     "id": 13,
     "title": "tripie",
     "URL": "https://m.media-amazon.com/images/I/7173jMSNUJL._SS500_.jpg",
@@ -260,39 +293,6 @@
         187,
         179,
         180
-      ]
-    ]
-  },
-  {
-    "id": 16,
-    "title": "hipster",
-    "URL": "http://alternopolis.com/wp-content/uploads/2014/02/hipstercat2.jpg",
-    "date": "2016-06-16",
-    "pallete": [
-      [
-        167,
-        178,
-        151
-      ],
-      [
-        34,
-        26,
-        18
-      ],
-      [
-        81,
-        58,
-        35
-      ],
-      [
-        106,
-        90,
-        50
-      ],
-      [
-        103,
-        120,
-        96
       ]
     ]
   }

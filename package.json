@@ -1,4 +1,8 @@
 {
+  "name": "My Beautiful Gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "build-css": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/main.css --watch",
     "start": "npm run build-css & nodemon app.js"

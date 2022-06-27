@@ -5,9 +5,19 @@
         <%- include('./partials/head'); %>
     </head>
 </head>
-<body>
-    <div class="container flex justify-center content-center items-center h-full">
-        <h1 class="text-center text-red-600 text-2xl">Page not found</h1>
+<body class="bg-slate-800">
+    <div class="flex justify-center content-center h-screen w-screen">
+        <div class="grow basis-1/2 w-full flex items-center p-10">
+            <div>
+                <h2 class="text-3xl text-slate-400 font-bold pt-6 mb-8">Uh oh...</h2>
+                <h3 class="text-xl text-slate-400">You weren't supposed to see this.</h3>
+                <p class=" text-slate-400"> 
+                    The page you are looking for no longer exists.
+                    Return to the <a class="underline hover:text-slate-200" href="/">home page</a> and remember, you haven't seen anything.
+                </p>
+            </div>
+        </div>
+        <div class="grow basis-1/2 w-full bg-[url('https://excitedcats.com/wp-content/uploads/2021/09/Cat-Playing-Tissue_Shutterstock.jpg')] bg-no-repeat bg-cover bg-center"></div>
     </div>
 </body>
 </html>
