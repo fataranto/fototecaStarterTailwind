@@ -30,6 +30,7 @@ sortPics = function () {
     });
 }
 
+//creates an id number for a new image 
 nextId = function () {
     const ids = pictures.map(obj => {
         return obj.id;
@@ -38,7 +39,7 @@ nextId = function () {
     return nextId;
 }
 
-
+//creates a color pallete for every image
 const myColorPallete = (async (imageURL) => {
     const colorPallete = await getPaletteFromURL(imageURL);
     //console.log(colorPallete);
@@ -72,9 +73,9 @@ app.get("/upload", (req, res) => {
     //let error = 0;
    let errorCode = req.query.error;
    let error = errorCode;
-   let message;
+//   let message;
 
-    if (errorCode){
+/*     if (errorCode){
 
         if(errorCode == 1){
             message = `Something went wrong. It seems that the URL ${imgURL} is not a valid image`;
@@ -85,10 +86,10 @@ app.get("/upload", (req, res) => {
         console.log(message);
     }else{
         console.log("no query, body");
-    }
+    } */
 
 
-console.log(error);
+//console.log(error);
     res.render("form", {
         page_name: 'upload', //siempre tiene que ser un objeto, incluso si es solo una variable
         error: error,
@@ -96,10 +97,10 @@ console.log(error);
     });
 })
 
-app.get("/error", (req, res) => {
+/* app.get("/error", (req, res) => {
     res.render("404");
 })
-
+ */
 app.get("/update", (req, res) => {
     //console.log(req.query);
     const q = req.query.q;
