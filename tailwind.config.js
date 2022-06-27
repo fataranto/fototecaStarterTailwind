@@ -9,6 +9,7 @@ module.exports = {
         },
         fontFamily: {
             'sans': ['Helvetica', 'Arial', 'sans-serif'],
+            'ruthie': ['Ruthie', 'cursive'],
         },
         screens: {
             'sm': '480px'

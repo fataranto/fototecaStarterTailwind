@@ -9,7 +9,7 @@ const {
 } = require('color-thief-node');
 
 
-const pictures = JSON.parse(fs.readFileSync('./photospallete.json'));
+const pictures = JSON.parse(fs.readFileSync('./photos.json'));
 
 const isImageURL = require('image-url-validator').default;
 
@@ -35,8 +35,17 @@ nextId = function () {
     const ids = pictures.map(obj => {
         return obj.id;
     });
-    const nextId = Math.max(...ids) + 1;
+    //console.log(ids.length);
+    
+    let nextId;
+
+    if(ids.length == 0){
+        nextId = 1
+    }else{
+        nextId = Math.max(...ids) + 1;
+    };
     return nextId;
+    
 }
 
 //creates a color pallete for every image
@@ -59,12 +68,20 @@ app.use(express.urlencoded({
 })); //get data from form via POST
 
 app.get("/", (req, res) => {
-    sortPics();
-    res.render("index", {
-        numPics: pictures.length,
-        pics: pictures,
-        page_name: 'home'
-    });
+    if (pictures.length == 0){
+        //console.log(pictures.length);
+        //res.render("/nodata")
+        res.render("nodata");
+    } else {
+        sortPics();
+        res.render("index", {
+            numPics: pictures.length,
+            pics: pictures,
+            page_name: 'home'
+        });
+    }
+
+    
 })
 
 app.get("/upload", (req, res) => {
@@ -131,7 +148,7 @@ app.get("/update", (req, res) => {
 
 
     let data = JSON.stringify(pictures, null, 2);
-    fs.writeFileSync('photospallete.json', data);
+    fs.writeFileSync('photos.json', data);
 
     res.redirect("/");
 
@@ -180,7 +197,7 @@ app.post('/imgupload', async function (req, res) {
         pictures.push(myNewPic);
 
         let data = JSON.stringify(pictures, null, 2);
-        fs.writeFileSync('photospallete.json', data);
+        fs.writeFileSync('photos.json', data);
 
         res.redirect("/");
     } else {

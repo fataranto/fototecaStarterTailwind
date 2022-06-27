@@ -1,40 +1,35 @@
 [
   {
-    "title": "Fruits",
-    "URL": "https://cdn.pixabay.com/photo/2016/06/20/13/16/greengrocers-1468809_960_720.jpg",
-    "date": "2022-06-20",
+    "id": 1,
+    "title": "tripie",
+    "URL": "https://m.media-amazon.com/images/I/7173jMSNUJL._SS500_.jpg",
+    "date": "2022-06-03",
     "pallete": [
       [
-        176,
-        59,
-        26
+        116,
+        193,
+        156
       ],
       [
-        62,
-        50,
-        38
+        153,
+        97,
+        166
       ],
       [
-        223,
-        208,
-        88
+        146,
+        153,
+        62
       ],
       [
-        199,
-        159,
-        39
+        40,
+        130,
+        125
       ],
       [
-        167,
-        141,
-        157
+        198,
+        180,
+        96
       ]
     ]
-  },
-  {
-    "title": "Green Snake",
-    "URL": "https://cdn.pixabay.com/photo/2016/08/31/18/19/snake-1634293_960_720.jpg",
-    "date": "2018-02-20",
-    "pallete": {}
   }
 ]

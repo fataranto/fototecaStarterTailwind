@@ -9,13 +9,14 @@
 </head>
 
 <body class="bg-slate-800">
+  <h1 class="text-2xl sm:text-3xl text-slate-400 font-ruthie pt-4 pl-14">My Beautiful Gallery</h1>
   <div class="antialiased text-gray-900 px-6">
-    <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
+    <div class="max-w-xl mx-auto pb-12 divide-y md:max-w-4xl">
       <div class="py-12">
         <h2 class="text-center text-2xl text-slate-400 font-bold pt-4 tracking-wider">Add your favourite picture!</h2>
         <%- include('./partials/side'); %>
         <div class="mt-8 max-w-full flex justify-center">
-          <form class="form w-6/12" method="post" action="/imgupload">
+          <form class="form w-4/5 md:w-6/12" method="post" action="/imgupload">
 
             <div class="grid grid-cols-1 gap-6">
               <label class="block" for="title">
