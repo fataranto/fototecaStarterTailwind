@@ -77,10 +77,10 @@
                             </p>
                         </div>
                         <div class="flex flex-col justify-center mt-6 ">
-                            <div id="adm_col1" class="w-36"></div>
-                            <div id="adm_col2" class="w-36"></div>
-                            <div id="adm_col3" class="w-36"></div>
-                            <div id="adm_col4" class="w-36"></div>
+                            <div id="adm_col1" class="w-36 h-10 relative group"></div>
+                            <div id="adm_col2" class="w-36 h-10 relative group"></div>
+                            <div id="adm_col3" class="w-36 h-10 relative group"></div>
+                            <div id="adm_col4" class="w-36 h-10 relative group"></div>
                         </div>
                         <div class="mt-4">
                             <a id="adm_delete" class="btn-primary">Delete</a>
@@ -128,19 +128,20 @@
 
                 let adm_col1 = document.querySelector("#adm_col1");
                 adm_col1.style.backgroundColor = `rgb(${activeImage.color1})`;
-                adm_col1.innerHTML = `<p class="p-2">rgb(${activeImage.color1})</p>`;
+                adm_col1.innerHTML = `<p class="absolute p-2 h-10 w-full bg-gray-900/80 text-slate-400 text-sm opacity-0 group-hover:opacity-100">rgb(${activeImage.color1})</p>`;
 
+                
                 let adm_col2 = document.querySelector("#adm_col2");
                 adm_col2.style.backgroundColor = `rgb(${activeImage.color2})`;
-                adm_col2.innerHTML = `<p class="p-2">rgb(${activeImage.color2})</p>`;
+                adm_col2.innerHTML = `<p class="absolute p-2 h-10 w-full bg-gray-900/80 text-slate-400 text-sm opacity-0 group-hover:opacity-100">rgb(${activeImage.color2})</p>`;
 
                 let adm_col3 = document.querySelector("#adm_col3");
                 adm_col3.style.backgroundColor = `rgb(${activeImage.color3})`;
-                adm_col3.innerHTML = `<p class="p-2">rgb(${activeImage.color3})</p>`;
+                adm_col3.innerHTML = `<p class="absolute p-2 h-10 w-full bg-gray-900/80 text-slate-400 text-sm opacity-0 group-hover:opacity-100">rgb(${activeImage.color3})</p>`;
 
                 let adm_col4 = document.querySelector("#adm_col4");
                 adm_col4.style.backgroundColor = `rgb(${activeImage.color4})`;
-                adm_col4.innerHTML = `<p class="p-2">rgb(${activeImage.color4})</p>`;
+                adm_col4.innerHTML = `<p class="absolute p-2 h-10 w-full bg-gray-900/80 text-slate-400 text-sm opacity-0 group-hover:opacity-100">rgb(${activeImage.color4})</p>`;
 
                 let adm_delete = document.querySelector("#adm_delete");
                 adm_delete.href = `/update?q=delete&id=${activeImage.baseId}`;

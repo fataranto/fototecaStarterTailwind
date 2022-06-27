@@ -12,6 +12,9 @@ module.exports = {
         },
         screens: {
             'sm': '480px'
+        },
+        dropShadow: {
+          'light': '1px 1px 1px rgba(255, 255, 255, 0.9)',
         }
     }
 },
