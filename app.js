@@ -221,6 +221,6 @@ app.use((req, res) => {
     res.status(404).render('404');
 })
 
-const server = app.listen(3000, () => {
+const server = app.listen(3002, () => {
     console.log(`The application started on port ${server.address().port}`);
 });

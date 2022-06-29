@@ -1,9 +1,75 @@
 [
   {
-    "id": 1,
-    "title": "tripie",
+    "id": 15,
+    "title": "butterfly",
+    "URL": "https://fibrolandiablog.files.wordpress.com/2017/05/el38.jpg",
+    "date": "2022-06-10",
+    "pallete": [
+      [
+        197,
+        199,
+        199
+      ],
+      [
+        47,
+        50,
+        60
+      ],
+      [
+        122,
+        66,
+        66
+      ],
+      [
+        121,
+        128,
+        129
+      ],
+      [
+        136,
+        108,
+        84
+      ]
+    ]
+  },
+  {
+    "id": 23,
+    "title": "CAT FIGHt",
+    "URL": "https://www.lalocadelosgatos.com/wp-content/uploads/2013/09/Funny-Cats-Fight-Wallpaper.jpg",
+    "date": "2022-06-10",
+    "pallete": [
+      [
+        53,
+        45,
+        27
+      ],
+      [
+        186,
+        168,
+        150
+      ],
+      [
+        132,
+        107,
+        83
+      ],
+      [
+        155,
+        148,
+        122
+      ],
+      [
+        155,
+        148,
+        141
+      ]
+    ]
+  },
+  {
+    "id": 13,
+    "title": "TRIPIE",
     "URL": "https://m.media-amazon.com/images/I/7173jMSNUJL._SS500_.jpg",
-    "date": "2022-06-03",
+    "date": "2022-06-09",
     "pallete": [
       [
         116,
@@ -29,6 +95,270 @@
         198,
         180,
         96
+      ]
+    ]
+  },
+  {
+    "id": 14,
+    "title": "SUPER TRIP",
+    "URL": "https://1.bp.blogspot.com/-xaSPzfKoyjA/XWvtQt6-XwI/AAAAAAAACwc/H_16ejpXB7g1P2YG0bRI4Ev5zb86N59vwCLcBGAs/s1600/gatito%2B1.jpg",
+    "date": "2022-06-09",
+    "pallete": [
+      [
+        178,
+        198,
+        202
+      ],
+      [
+        41,
+        104,
+        55
+      ],
+      [
+        105,
+        154,
+        165
+      ],
+      [
+        102,
+        77,
+        71
+      ],
+      [
+        114,
+        127,
+        79
+      ]
+    ]
+  },
+  {
+    "id": 10,
+    "title": "BIG KITTIE",
+    "URL": "https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_960_720.jpg",
+    "date": "2022-06-01",
+    "pallete": [
+      [
+        39,
+        50,
+        30
+      ],
+      [
+        208,
+        187,
+        151
+      ],
+      [
+        135,
+        166,
+        104
+      ],
+      [
+        113,
+        119,
+        81
+      ],
+      [
+        124,
+        134,
+        160
+      ]
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Take this",
+    "URL": "https://i.pinimg.com/originals/f1/a9/c4/f1a9c4fe6ae5ea58f7f93b04e2132fbd.jpg",
+    "date": "2022-05-25",
+    "pallete": [
+      [
+        144,
+        144,
+        106
+      ],
+      [
+        47,
+        59,
+        46
+      ],
+      [
+        197,
+        201,
+        194
+      ],
+      [
+        210,
+        208,
+        141
+      ],
+      [
+        85,
+        73,
+        43
+      ]
+    ]
+  },
+  {
+    "id": 19,
+    "title": "cat PARTY",
+    "URL": "https://media.salon.com/2022/05/cats-party-0516221.jpg",
+    "date": "2022-04-08",
+    "pallete": [
+      [
+        72,
+        83,
+        39
+      ],
+      [
+        208,
+        161,
+        74
+      ],
+      [
+        160,
+        118,
+        43
+      ],
+      [
+        163,
+        139,
+        163
+      ],
+      [
+        172,
+        183,
+        161
+      ]
+    ]
+  },
+  {
+    "id": 2,
+    "title": "BLUE EYES",
+    "URL": "https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg",
+    "date": "2022-04-02",
+    "pallete": [
+      [
+        144,
+        145,
+        145
+      ],
+      [
+        44,
+        47,
+        48
+      ],
+      [
+        224,
+        224,
+        224
+      ],
+      [
+        91,
+        57,
+        55
+      ],
+      [
+        93,
+        76,
+        68
+      ]
+    ]
+  },
+  {
+    "id": 26,
+    "title": "flight 2",
+    "URL": "https://cattime.com/assets/uploads/2018/01/cats-jumping-1.jpg",
+    "date": "2020-11-11",
+    "pallete": [
+      [
+        94,
+        124,
+        63
+      ],
+      [
+        214,
+        209,
+        206
+      ],
+      [
+        50,
+        50,
+        38
+      ],
+      [
+        184,
+        164,
+        144
+      ],
+      [
+        141,
+        197,
+        91
+      ]
+    ]
+  },
+  {
+    "id": 25,
+    "title": "CAT FLIGHT",
+    "URL": "https://cattime.com/assets/uploads/gallery/amazing-cats-in-flight/cats-in-flight-1.jpg",
+    "date": "2020-02-08",
+    "pallete": [
+      [
+        198,
+        206,
+        219
+      ],
+      [
+        35,
+        42,
+        27
+      ],
+      [
+        113,
+        106,
+        64
+      ],
+      [
+        105,
+        138,
+        178
+      ],
+      [
+        87,
+        77,
+        44
+      ]
+    ]
+  },
+  {
+    "id": 8,
+    "title": "TITI",
+    "URL": "https://cdn.pixabay.com/photo/2018/10/11/12/31/cat-3739702_960_720.jpg",
+    "date": "2018-06-08",
+    "pallete": [
+      [
+        113,
+        120,
+        103
+      ],
+      [
+        212,
+        203,
+        196
+      ],
+      [
+        29,
+        26,
+        25
+      ],
+      [
+        184,
+        188,
+        175
+      ],
+      [
+        187,
+        179,
+        180
       ]
     ]
   }

@@ -39,8 +39,8 @@ si la url ya existe:
 
 BONUS
 Implementar un o més punts ajudarà en la nota general de la unitat formativa.
-Afegir la possiblitat d' esborrar una fotografía
-Afegir la possibilitat d' editar una fotografía
+Afegir la possiblitat d' esborrar una fotografía - ok
+Afegir la possibilitat d' editar una fotografía - ok
 Implementar la pràctica segons el patró Model Vista Controlador
 *********************************************************************
 
@@ -49,20 +49,19 @@ Implementar la pràctica segons el patró Model Vista Controlador
 ********************************************************************
 TODO
 
-
-mostrar el código rgb de cada color de la paleta
-(a nivel BONUS) -> hacer que al clicar la imagen abra una ficha, puede ser un modal o una página nueva con la imagen ampliada y toda la información, incluir ahí el código RGB de la paleta y la posibilidad tanto de modificar los datos de la imagen como de eliminarla
-(falta dar estilo a los botones. El botón "save" se debe mostrar apagado y activarse solo cuando se ha modificado algún dato. Técnicamente funciona así, solo hay que trabajar sobre los estilos)
-
-mostrar respuestas tanto de error como de confirmación de que la imagen se ha subido correctamente (también puede estar bien solo enviarlo a la home)
-
 mostrar un elemento mientras se está cargando la imagen y desactivar el botón del formulario
 
-hacer página "about"
-
-hacer un logo o escoger una imagen pequeña para la esquina
-
 Implementar patrón Modelo Vista Controlador
+
+
+FUTURO...
+Compartir imagen / galería (no se podría editar o podría ser colaborativa)
+
+Pasar a bbdd
+
+Crear usuarios de manera que cada quien pudiese guardar una o varias galerías
+
+posibilidad de subir imágenes
 
 
 
