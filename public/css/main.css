@@ -951,10 +951,6 @@ select {
   top: 50%;
 }
 
-.left-2\/4 {
-  left: 50%;
-}
-
 .left-full {
   left: 100%;
 }
@@ -965,22 +961,6 @@ select {
 
 .bottom-0 {
   bottom: 0px;
-}
-
-.left-10 {
-  left: 2.5rem;
-}
-
-.left-14 {
-  left: 3.5rem;
-}
-
-.left-20 {
-  left: 5rem;
-}
-
-.left-24 {
-  left: 6rem;
 }
 
 .isolate {
@@ -1084,12 +1064,16 @@ select {
   margin-top: 1.75rem;
 }
 
-.ml-32 {
-  margin-left: 8rem;
+.ml-20 {
+  margin-left: 5rem;
 }
 
 .-mt-7 {
   margin-top: -1.75rem;
+}
+
+.ml-32 {
+  margin-left: 8rem;
 }
 
 .ml-4 {
@@ -1102,10 +1086,6 @@ select {
 
 .mt-0 {
   margin-top: 0px;
-}
-
-.ml-20 {
-  margin-left: 5rem;
 }
 
 .box-border {
@@ -1218,10 +1198,6 @@ select {
 
 .h-5 {
   height: 1.25rem;
-}
-
-.h-\[70vh\] {
-  height: 70vh;
 }
 
 .h-10 {
@@ -1350,11 +1326,6 @@ select {
 
 .border-separate {
   border-collapse: separate;
-}
-
-.-translate-x-1\/4 {
-  --tw-translate-x: -25%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-y-1\/2 {
@@ -3336,15 +3307,9 @@ select {
   content: "hello";
 }
 
-/* pseudo selectores y otros especiales */
-
-:root {
-  --primary: #ffffff;
-  --secondary: #3f2f21;
-  --bg-primary: rgba(190, 183, 171, 0.3);
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet');
 
 .hover\:border-indigo-500:hover {
   --tw-border-opacity: 1;
@@ -3641,12 +3606,12 @@ select {
     }
   }
 
-  .sm\:left-0 {
-    left: 0px;
-  }
-
   .sm\:left-2\/4 {
     left: 50%;
+  }
+
+  .sm\:left-0 {
+    left: 0px;
   }
 
   .sm\:mt-7 {
@@ -3655,6 +3620,10 @@ select {
 
   .sm\:ml-5 {
     margin-left: 1.25rem;
+  }
+
+  .sm\:block {
+    display: block;
   }
 
   .sm\:h-36 {
@@ -3686,6 +3655,11 @@ select {
     background-color: rgb(51 65 85 / var(--tw-bg-opacity));
   }
 
+  .sm\:bg-red-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -3709,6 +3683,10 @@ select {
 
   .md\:ml-0 {
     margin-left: 0px;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:h-80 {
@@ -3754,26 +3732,6 @@ select {
 }
 
 @media (min-width: 1024px) {
-  .lg\:h-full {
-    height: 100%;
-  }
-
-  .lg\:h-96 {
-    height: 24rem;
-  }
-
-  .lg\:h-\[32-rem\] {
-    height: 32 - rem;
-  }
-
-  .lg\:h-\[32rem\] {
-    height: 32rem;
-  }
-
-  .lg\:h-\[34rem\] {
-    height: 34rem;
-  }
-
   .lg\:h-\[36rem\] {
     height: 36rem;
   }
@@ -3792,5 +3750,3 @@ select {
     height: 46rem;
   }
 }
-
-

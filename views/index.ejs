@@ -19,7 +19,7 @@
             id="<%= p.id %>_<%= ((p.title).replace(/\s/g, '_')).toLowerCase() %>" data-id="<%= p.id %>"
             data-name="<%= p.title %>" data-url="<%= p.URL %>" data-date="<%= p.date %>"
             data-color1="<%= p.pallete[0] %>" data-color2="<%= p.pallete[1] %>" data-color3="<%= p.pallete[2] %>"
-            data-color4="<%= p.pallete[3] %>" data-bs-toggle="modal" data-bs-target="#exampleModalXl">
+            data-color4="<%= p.pallete[3] %>" data-size="<%= p.size %>" data-width="<%= p.width %>" data-height="<%= p.height %>" data-bs-toggle="modal" data-bs-target="#exampleModalXl">
             <img class="w-56 sm:h-36 sm:w-auto" src="<%= p.URL %>" alt="<%= p.title %>">
             <p id="<%= i %>_title" class="uppercase text-center text-slate-400 pt-2 tracking-widest text-sm">
                 <%= p.title %>
@@ -87,9 +87,15 @@
                                 <div id="adm_col3" class="w-10 sm:w-36 h-10 relative group"></div>
                                 <div id="adm_col4" class="w-10 sm:w-36 h-10 relative group"></div>
                             </div>
+                            <div id="edData" class="mt-2 ">
+                                <p class="hidden md:block text-sm text-slate-400 tracking-wider" >Size: <span></span> kB
+                                </p>
+                                <p class="hidden md:block text-sm text-slate-400 tracking-wider">Width: <span></span>px
+                                </p>
+                                <p class="hidden md:block text-sm text-slate-400 tracking-wider">Height: <span></span>px
+                                </p>
+                            </div>
                             <div class="mt-7 ml-20 sm:mt-7 sm:ml-5 md:mt-4 md:ml-0">
-                                
-
                                 <a onclick="confirmDeletion()"class="btn-primary cursor-pointer m-1" >Delete</a>
                                 <a id="adm_save" class="btn-primary hover:bg-sky-900/50 hover:text-slate-500
                                 bg-sky-900/50
@@ -133,6 +139,9 @@
                 activeImage.color2 = p.dataset.color2;
                 activeImage.color3 = p.dataset.color3;
                 activeImage.color4 = p.dataset.color4;
+                activeImage.size = (Number(p.dataset.size)/1000).toFixed(0);
+                activeImage.width = p.dataset.width;
+                activeImage.height = p.dataset.height;
 
 
                 let adm_img = document.querySelector("#adm_img");
@@ -160,6 +169,15 @@
                 let adm_col4 = document.querySelector("#adm_col4");
                 adm_col4.style.backgroundColor = `rgb(${activeImage.color4})`;
                 adm_col4.innerHTML = `<p class="absolute left-full sm:left-0 p-2 h-10 w-34 sm:w-36 sm:w-full bg-gray-900/80 text-slate-400 text-sm opacity-0 group-hover:opacity-100">rgb(${activeImage.color4})</p>`;
+
+                let adm_size = document.querySelector("#edData > p:nth-child(1) > span");
+                adm_size.textContent = activeImage.size;
+
+                let adm_width = document.querySelector("#edData > p:nth-child(2) > span");
+                adm_width.textContent = activeImage.width;
+
+                let adm_height = document.querySelector("#edData > p:nth-child(3) > span");
+                adm_height.textContent = activeImage.height;
 
                 let adm_delete = document.querySelector("#adm_delete_confirm_btn");
                 adm_delete.href = `/update?q=delete&id=${activeImage.baseId}`;

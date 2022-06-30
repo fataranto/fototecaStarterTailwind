@@ -62,8 +62,7 @@
                             " value="" name="date" id="date" required>
               </label>
               <div class="block">
-                <button
-                  class="btn-primary">Submit</button>
+                <button class="btn-primary">Submit</button>
               </div>
             </div>
           </form>
@@ -72,31 +71,32 @@
 
 
         <div class=" flex justify-center
-        <% if(error == 1 || error == 2){ %>
-          visible
-        <% } else{ %>  
+        <% if(!error){ %>
           hidden
+        <% } else{ %>  
+          visible
        <% } %>
         ">
-          <div class=" p-4 text-red-700 border rounded border-red-900/10 bg-red-50/60 mt-10 w-4/6" >
-          <p class="text-sm font-medium text-center"><strong> Something went wrong </strong></p>
+          <div class=" p-4 text-red-700 border rounded border-red-900/10 bg-red-50/60 mt-10 w-4/6">
+            <p class="text-sm font-medium text-center"><strong> Something went wrong </strong></p>
 
-          <div class="mt-1 text-xs tracking-wide">
-            <% if(error == 1){ %>
-              It seems that the URL <span class="underline"><%=imgURL%></span> is not a valid image.
-            <% } else{ %>  
-              <div><img src="<%=imgURL%>" class="w-16 mr-3 float-left"></div>
+            <div class="mt-1 text-xs tracking-wide">
+
+              <% if(error == 1){ %>
+                <div><img src="<%=imgURL%>" class="w-16 mr-3 float-left"></div>
               <p class="">That's a very nice photo, but this image is already in our database</p>
-           <% } %>
+              <% } else if (error == 2){%>
+                It seems that the URL <span class="underline"><%=imgURL%></span> is not a valid image.
+                <% } else if (error == 3){%>
+                  The image in the URL <span class="underline"><%=imgURL%></span> is too big. Please try with a smaller one,
+                  under 1MB.
+                  <% } %>    
             </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-
-
-
 
 </body>
 

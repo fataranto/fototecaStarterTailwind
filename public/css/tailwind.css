@@ -8,14 +8,6 @@
 }}
 
 
-
-/* pseudo selectores y otros especiales */
-:root {
-  --primary: #ffffff;
-  --secondary: #3f2f21;
-  --bg-primary: rgba(190, 183, 171, 0.3);
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet');
