@@ -19,14 +19,12 @@ let imgURL, error;
 let isImage, notTooBig, imgData;
 
 
-
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
 app.use(express.urlencoded({
     extended: false
 })); //get data from form via POST
-
 
 
 
@@ -78,14 +76,6 @@ let existsURL = function (imgURL) {
     return result;
 }
 
-/* check the image size */ 
-/* const myImageSize = (async (imageURL) => {
-    const theSize = await probe(imageURL);
-    return theSize;
-}); */
-
-
-
 
 /* creates a color pallete for every image */
 const myColorPallete = (async (imageURL) => {
@@ -135,10 +125,6 @@ app.post('/imgupload', async function (req, res) {
     //validate if url is already in our "database"
     let notInDataBase = existsURL(imgURL);
 
-    //console.log(existsURL(imgURL));
-
-   /*  console.log("-1 notInDatabase = ", notInDataBase);
-    console.log(error); */
 
     if (!error) {
         //validate if url refers to an image
@@ -149,9 +135,6 @@ app.post('/imgupload', async function (req, res) {
             return is_image
         });
     }
-
-  /*   console.log("-1 isImage = ", isImage);
-    console.log(error); */
 
 
     //validate if image size is not too big
@@ -169,12 +152,7 @@ app.post('/imgupload', async function (req, res) {
     };  
 
 
-    /* console.log("length: ", imgData.length);
-    console.log("error: ", error);
-    console.log("notTooBig: ", notTooBig); */
-
     if (notInDataBase && isImage && notTooBig) {
-        //console.log(imgData);
         let cPallete = await myColorPallete(imgURL);
 
         let myNewPic = {
@@ -223,7 +201,6 @@ app.get("/update", (req, res) => {
     if (q == "update") {
         const title = req.query.title;
         const date = req.query.date;
-        // console.log(q, id, title, date);
         pictures.filter((obj, i) => {
             if (obj.id == id) {
                 pictures[i].title = title;
