@@ -1,9 +1,81 @@
 [
   {
-    "id": 17,
-    "title": "ddsf",
+    "id": 1,
+    "title": "tripie",
+    "URL": "https://m.media-amazon.com/images/I/7173jMSNUJL._SS500_.jpg",
+    "date": "2022-06-09",
+    "pallete": [
+      [
+        116,
+        193,
+        156
+      ],
+      [
+        153,
+        97,
+        166
+      ],
+      [
+        146,
+        153,
+        62
+      ],
+      [
+        40,
+        130,
+        125
+      ],
+      [
+        198,
+        180,
+        96
+      ]
+    ],
+    "size": 14892,
+    "width": 500,
+    "height": 500
+  },
+  {
+    "id": 4,
+    "title": "BIG kittie",
+    "URL": "https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_960_720.jpg",
+    "date": "2022-06-09",
+    "pallete": [
+      [
+        39,
+        50,
+        30
+      ],
+      [
+        208,
+        187,
+        151
+      ],
+      [
+        135,
+        166,
+        104
+      ],
+      [
+        113,
+        119,
+        81
+      ],
+      [
+        124,
+        134,
+        160
+      ]
+    ],
+    "size": 164018,
+    "width": 960,
+    "height": 639
+  },
+  {
+    "id": 16,
+    "title": "Blue Eyes",
     "URL": "https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg",
-    "date": "2022-06-17",
+    "date": "2022-06-09",
     "pallete": [
       [
         144,
@@ -36,10 +108,82 @@
     "height": 655
   },
   {
-    "id": 16,
-    "title": "asd",
+    "id": 15,
+    "title": "gren snake",
+    "URL": "https://cdn.pixabay.com/photo/2016/08/31/18/19/snake-1634293_960_720.jpg",
+    "date": "2022-06-03",
+    "pallete": [
+      [
+        51,
+        62,
+        7
+      ],
+      [
+        197,
+        189,
+        102
+      ],
+      [
+        136,
+        132,
+        48
+      ],
+      [
+        151,
+        182,
+        60
+      ],
+      [
+        147,
+        156,
+        142
+      ]
+    ],
+    "size": 55623,
+    "width": 960,
+    "height": 640
+  },
+  {
+    "id": 11,
+    "title": "fruits",
+    "URL": "https://cdn.pixabay.com/photo/2016/06/20/13/16/greengrocers-1468809_960_720.jpg",
+    "date": "2022-06-01",
+    "pallete": [
+      [
+        176,
+        59,
+        26
+      ],
+      [
+        62,
+        50,
+        38
+      ],
+      [
+        223,
+        208,
+        88
+      ],
+      [
+        199,
+        159,
+        39
+      ],
+      [
+        167,
+        141,
+        157
+      ]
+    ],
+    "size": 196135,
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": 14,
+    "title": "sAD",
     "URL": "https://cdn.pixabay.com/photo/2018/10/11/12/31/cat-3739702_960_720.jpg",
-    "date": "2022-06-08",
+    "date": "2022-06-01",
     "pallete": [
       [
         113,
@@ -72,39 +216,147 @@
     "height": 640
   },
   {
-    "id": 18,
-    "title": "adasf",
-    "URL": "https://randomwordgenerator.com/img/picture-generator/53e1d7444d53af14f1dc8460962e33791c3ad6e04e507440742a7ad19f4cc0_640.jpg",
-    "date": "2022-06-07",
+    "id": 2,
+    "title": "SUPER TRIP",
+    "URL": "https://1.bp.blogspot.com/-xaSPzfKoyjA/XWvtQt6-XwI/AAAAAAAACwc/H_16ejpXB7g1P2YG0bRI4Ev5zb86N59vwCLcBGAs/s1600/gatito%2B1.jpg",
+    "date": "2022-05-04",
     "pallete": [
       [
-        65,
-        95,
-        134
+        178,
+        198,
+        202
       ],
       [
-        207,
-        200,
-        200
+        41,
+        104,
+        55
       ],
       [
-        20,
-        22,
-        30
+        105,
+        154,
+        165
       ],
       [
-        130,
-        200,
-        210
+        102,
+        77,
+        71
       ],
       [
-        135,
-        158,
-        209
+        114,
+        127,
+        79
       ]
     ],
-    "size": 85996,
+    "size": 80005,
+    "width": 564,
+    "height": 683
+  },
+  {
+    "id": 3,
+    "title": "CAT FIGhT",
+    "URL": "https://www.lalocadelosgatos.com/wp-content/uploads/2013/09/Funny-Cats-Fight-Wallpaper.jpg",
+    "date": "2018-06-01",
+    "pallete": [
+      [
+        53,
+        45,
+        27
+      ],
+      [
+        186,
+        168,
+        150
+      ],
+      [
+        132,
+        107,
+        83
+      ],
+      [
+        155,
+        148,
+        122
+      ],
+      [
+        155,
+        148,
+        141
+      ]
+    ],
+    "size": 110940,
+    "width": 1600,
+    "height": 1000
+  },
+  {
+    "id": 17,
+    "title": "hidden",
+    "URL": "https://randomwordgenerator.com/img/picture-generator/57e3d3444a52ac14f1dc8460962e33791c3ad6e04e50744172297cdd9f45c7_640.jpg",
+    "date": "2022-06-09",
+    "pallete": [
+      [
+        73,
+        120,
+        23
+      ],
+      [
+        140,
+        207,
+        58
+      ],
+      [
+        187,
+        232,
+        72
+      ],
+      [
+        22,
+        29,
+        16
+      ],
+      [
+        125,
+        127,
+        123
+      ]
+    ],
+    "size": 69036,
     "width": 640,
-    "height": 427
+    "height": 400
+  },
+  {
+    "id": 18,
+    "title": "Cactus",
+    "URL": "https://randomwordgenerator.com/img/picture-generator/50e6d1414c50b10ff3d8992cc12c30771037dbf85254784e77267ed09444_640.jpg",
+    "date": "2022-06-08",
+    "pallete": [
+      [
+        18,
+        15,
+        13
+      ],
+      [
+        181,
+        175,
+        163
+      ],
+      [
+        119,
+        136,
+        126
+      ],
+      [
+        148,
+        63,
+        20
+      ],
+      [
+        115,
+        124,
+        133
+      ]
+    ],
+    "size": 74195,
+    "width": 640,
+    "height": 443
   }
 ]
